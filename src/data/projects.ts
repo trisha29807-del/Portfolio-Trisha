@@ -9,13 +9,9 @@ export interface Project {
   tech: string[];
   githubUrl?: string;
   liveUrl?: string;
-  /** Default "View Case Study" CTA target — used unless primaryCta overrides it. */
   caseStudyUrl?: string;
-  /** Overrides the default primary CTA. "toggle-detail" opens the inline case-study instead of navigating. */
   primaryCta?: { label: string; href?: string; external?: boolean; action?: "toggle-detail" };
-  /** Overrides the default "GitHub" button label (e.g. "GitHub ↗"). */
   githubLabel?: string;
-  /** Compact, optional metric highlight — kept deliberately minimal, only real verified numbers. */
   metrics?: { label: string; value: string }[];
   imageSide: "left" | "right";
 }
@@ -68,10 +64,10 @@ export const projects: Project[] = [
     year: "2026",
     title: "Delhi Heritage Explorer",
     description:
-      "A web platform for discovering Delhi's cultural heritage through an interactive heritage directory, an AI guide, a knowledge quiz, and personalized recommendations — built for Delhi AI Grind 2026.",
+      "An AI-powered web platform for discovering Delhi's cultural heritage through exploration, contextual place details, an AI heritage guide, personalized trails, quizzes, and local artisan discovery.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "Gemini"],
     githubUrl: "https://github.com/trisha29807-del/delhi-heritage-explorer",
-    githubLabel: "GitHub",
+    githubLabel: "GitHub ↗",
     liveUrl: "https://delhi-heritage-explorer.vercel.app",
     primaryCta: {
       label: "View Case Study",

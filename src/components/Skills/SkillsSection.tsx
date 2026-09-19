@@ -1,0 +1,100 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Globe, BrainCircuit, Code2, Layers, Smartphone, Palette } from "lucide-react";
+import { skillCategories } from "@/data/skills";
+import { AnimatedDivider } from "@/components/shared/AnimatedDivider";
+import { SkillPanel } from "./SkillPanel";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 16 },
+  show: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, delay, ease: [0.65, 0, 0.35, 1] as const },
+  }),
+};
+
+const icons = [Globe, BrainCircuit, Code2, Layers, Smartphone, Palette];
+
+export function SkillsSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const bgY = useTransform(scrollYProgress, [0, 1], [-30, 30]);
+
+  return (
+    <section
+      ref={sectionRef}
+      id="skills"
+      className="relative overflow-hidden bg-day-bg text-day-ink transition-colors duration-700 ease-editorial dark:bg-night-bg dark:text-night-ink"
+    >
+      {/* oversized background typography — centered behind the panel grid, integrated rather than corner-cropped */}
+      <motion.div
+        aria-hidden="true"
+        style={{ y: bgY }}
+        className="pointer-events-none absolute inset-x-0 top-[22%] flex justify-center"
+      >
+        <span className="select-none font-serif text-[30rem] leading-none text-day-ink/[0.03] dark:text-night-ink/[0.03] sm:text-[38rem]">
+          03
+        </span>
+      </motion.div>
+
+      <div className="container-editorial relative pt-20 sm:pt-28">
+        {/* Section header */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-15% 0px" }}
+          variants={fadeUp}
+        >
+          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
+            03
+          </span>
+          <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-day-ink dark:text-night-ink">
+            Skills
+          </h2>
+          <p className="mt-5 max-w-[38ch] font-serif text-[19px] italic leading-relaxed text-day-muted dark:text-night-muted">
+            The tools behind what I build.
+          </p>
+        </motion.div>
+
+        <div className="mt-12 sm:mt-16">
+          <AnimatedDivider />
+        </div>
+
+        {/* Panel grid — 3x2 desktop, 2x3 tablet, 1x6 mobile.
+            items-start lets each panel keep its own natural height, so
+            AI & ML (more tags) and the CS list panel read taller than
+            their neighbours instead of being stretched to match. */}
+        <div className="grid grid-cols-1 items-start gap-5 py-16 sm:grid-cols-2 sm:py-20 lg:grid-cols-3">
+          {skillCategories.map((category, i) => (
+            <SkillPanel
+              key={category.number}
+              category={category}
+              icon={icons[i]}
+              delay={0.08 * i}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Closing statement */}
+      <motion.div
+        initial="hidden"
+        whileInView="show"
+        custom={0.15}
+        viewport={{ once: true, margin: "-15% 0px" }}
+        variants={fadeUp}
+        className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
+      >
+        <p className="mx-auto max-w-xl font-serif text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-day-ink dark:text-night-ink">
+          Tools matter.
+          <br />
+          What you build with them matters more.
+        </p>
+      </motion.div>
+    </section>
+  );
+}

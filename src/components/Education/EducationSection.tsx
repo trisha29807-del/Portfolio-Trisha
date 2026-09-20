@@ -231,7 +231,7 @@ export function EducationSection() {
                 custom={0.06 * i}
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
-                className="rounded-md border border-day-burgundy/35 px-4 py-2 font-seasons text-[14px] text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-[#7FDFFF]/[0.06] dark:border-night-burgundy/40 dark:text-white dark:hover:bg-night-burgundy/[0.08]"
+                className="rounded-md border border-[\#B9B7FF]/35 px-4 py-2 font-seasons text-[14px] text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-[#7FDFFF]/[0.06] dark:border-[\#B9B7FF]/40 dark:text-white dark:hover:bg-[#B9B7FF]/[0.08]"
               >
                 {tag}
               </motion.span>

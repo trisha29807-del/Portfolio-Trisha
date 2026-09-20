@@ -22,8 +22,8 @@ export function AboutSection() {
       <div aria-hidden="true" className="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-[#6977C8]/20 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute -left-32 bottom-[-7rem] h-96 w-96 rounded-full bg-[#1E4B82]/35 blur-2xl" />
 
-      <div className="mx-auto max-w-[1440px] px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
-        <div className="grid items-end gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto max-w-[1440px] px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+        <div className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-15% 0px" }} variants={fadeUp}>
             <div className="flex items-center gap-4 text-[#B9F0FF]">
               <span className="font-seasons text-sm">01</span>
@@ -31,25 +31,25 @@ export function AboutSection() {
               <span className="font-mager text-xs tracking-[0.18em]">ABOUT ME</span>
             </div>
 
-            <h2 className="mt-7 max-w-5xl font-boldfat text-[clamp(4rem,10vw,9rem)] leading-[0.82] tracking-[-0.04em] text-white">
+            <h2 className="mt-5 max-w-5xl font-boldfat text-[clamp(3.3rem,7vw,6.6rem)] leading-[0.82] tracking-[-0.04em] text-white">
               I BUILD
               <span className="block text-[#B9B7FF]">WITH PURPOSE.</span>
             </h2>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="show" custom={0.12} viewport={{ once: true, margin: "-15% 0px" }} variants={fadeUp} className="lg:pb-3">
-            <p className="font-seasons text-[clamp(1.3rem,2.4vw,2rem)] leading-[1.35] text-[#B9F0FF]">
+            <p className="font-seasons text-[clamp(1.05rem,1.7vw,1.45rem)] leading-[1.35] text-[#B9F0FF]">
               I’m Trisha — a Computer Science Engineering student at IGDTUW, passionate about AI/ML and building solutions that create real impact.
             </p>
-            <p className="mt-6 max-w-xl text-[15px] leading-7 text-[#B7C6E9]">
+            <p className="mt-4 max-w-xl text-[14px] leading-6 text-[#B7C6E9]">
               I enjoy taking an idea from curiosity to implementation: understanding the problem, learning the technology behind it, and turning it into something people can actually use.
             </p>
           </motion.div>
         </div>
 
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-10% 0px" }} variants={fadeUp} className="mt-16 h-px bg-[#294777]" />
+        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-10% 0px" }} variants={fadeUp} className="mt-10 h-px bg-[#294777]" />
 
-        <div className="mt-10 grid gap-px overflow-hidden border border-[#294777] bg-[#294777] md:grid-cols-3">
+        <div className="mt-7 grid gap-px overflow-hidden border border-[#294777] bg-[#294777] md:grid-cols-3">
           {focus.map(({ icon: Icon, label, text }, i) => (
             <motion.article
               key={label}
@@ -58,7 +58,7 @@ export function AboutSection() {
               custom={0.08 * i}
               viewport={{ once: true, margin: "-10% 0px" }}
               variants={fadeUp}
-              className="group bg-[#07133A] p-7 transition-colors duration-300 hover:bg-[#0A1B4B] sm:p-9"
+              className="group bg-[#07133A] p-5 transition-colors duration-300 hover:bg-[#0A1B4B] sm:p-6"
             >
               <div className="flex items-center justify-between">
                 <Icon size={22} strokeWidth={1.4} className="text-[#B9B7FF]" />
@@ -71,7 +71,7 @@ export function AboutSection() {
           ))}
         </div>
 
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3">
+        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-3">
           <span className="font-mager text-sm tracking-[0.14em] text-[#C9C8FF]">AI / ML</span>
           <span className="h-1 w-1 rounded-full bg-[#7FDFFF]" />
           <span className="font-mager text-sm tracking-[0.14em] text-[#C9C8FF]">FULL-STACK DEVELOPMENT</span>

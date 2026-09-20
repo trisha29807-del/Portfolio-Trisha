@@ -47,9 +47,9 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-10% 0px" }} variants={fadeUp} className="mt-7 h-px bg-[#294777]" />
+        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-10% 0px" }} variants={fadeUp} className="mt-10 h-px bg-[#294777]" />
 
-        <div className="mt-5 grid gap-px overflow-hidden border border-[#294777] bg-[#294777] md:grid-cols-3">
+        <div className="mt-7 grid gap-px overflow-hidden border border-[#294777] bg-[#294777] md:grid-cols-3">
           {focus.map(({ icon: Icon, label, text }, i) => (
             <motion.article
               key={label}
@@ -58,20 +58,20 @@ export function AboutSection() {
               custom={0.08 * i}
               viewport={{ once: true, margin: "-10% 0px" }}
               variants={fadeUp}
-              className="group bg-[#07133A] p-4 transition-colors duration-300 hover:bg-[#0A1B4B] sm:p-6"
+              className="group bg-[#07133A] p-5 transition-colors duration-300 hover:bg-[#0A1B4B] sm:p-6"
             >
               <div className="flex items-center justify-between">
                 <Icon size={22} strokeWidth={1.4} className="text-[#B9B7FF]" />
                 <span className="font-seasons text-sm text-[#7FDFFF]">0{i + 1}</span>
               </div>
-              <h3 className="mt-8 font-mager text-xl tracking-wide text-[#D2D0FF]">{label}</h3>
-              <p className="mt-3 text-sm leading-6 text-[#AEBEDE]">{text}</p>
-              <ArrowDownRight size={18} className="mt-5 text-[#6F88C0] transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1" />
+              <h3 className="mt-12 font-mager text-xl tracking-wide text-[#D2D0FF]">{label}</h3>
+              <p className="mt-4 text-sm leading-6 text-[#AEBEDE]">{text}</p>
+              <ArrowDownRight size={18} className="mt-8 text-[#6F88C0] transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1" />
             </motion.article>
           ))}
         </div>
 
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-3">
+        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp} className="mt-5 flex flex-wrap items-center gap-x-8 gap-y-3">
           <span className="font-mager text-sm tracking-[0.14em] text-[#C9C8FF]">AI / ML</span>
           <span className="h-1 w-1 rounded-full bg-[#7FDFFF]" />
           <span className="font-mager text-sm tracking-[0.14em] text-[#C9C8FF]">FULL-STACK DEVELOPMENT</span>

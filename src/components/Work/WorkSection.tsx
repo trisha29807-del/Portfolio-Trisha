@@ -41,7 +41,7 @@ export function WorkSection() {
             viewport={{ once: true, margin: "-15% 0px" }}
             variants={fadeUp}
           >
-            <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
+            <span className="font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[-0.03em] text-white dark:text-white">
               02 · Selected Works
             </span>
             <h2 className="mt-4 font-boldfat text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.08] text-white dark:text-white">

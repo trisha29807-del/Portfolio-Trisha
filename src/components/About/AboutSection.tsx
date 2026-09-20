@@ -22,7 +22,7 @@ export function AboutSection() {
       <div aria-hidden="true" className="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-[#6977C8]/20 blur-3xl" />
       <div aria-hidden="true" className="pointer-events-none absolute -left-32 bottom-[-7rem] h-96 w-96 rounded-full bg-[#1E4B82]/35 blur-2xl" />
 
-      <div className="mx-auto max-w-[1440px] px-6 pt-10 pb-0 sm:px-10 sm:pt-12 sm:pb-0 lg:px-16">
+      <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-0 sm:px-10 sm:pt-10 sm:pb-0 lg:px-16">
         <div className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-15% 0px" }} variants={fadeUp}>
             <div className="flex items-center gap-4 text-[#B9F0FF]">

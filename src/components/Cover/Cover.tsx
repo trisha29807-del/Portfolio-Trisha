@@ -66,7 +66,7 @@ export function Cover() {
 
           <div className="absolute left-[3%] top-[42%] z-20 w-[54%] max-w-[700px] text-center">
             <motion.p initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="font-seasons text-[clamp(1.05rem,1.7vw,1.6rem)] text-[#B9F0FF]">
-              Computer Science Engineering student at IGDTUW
+              Computer Science and Engineering student at IGDTUW
             </motion.p>
             <motion.p initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mx-auto mt-2 max-w-[780px] font-seasons text-[clamp(1rem,1.6vw,1.5rem)] leading-[1.25] ">
               Passionate about AI, ML and building solutions that create real

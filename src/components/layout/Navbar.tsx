@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
-import { EditionSwitch } from "@/components/Cover/EditionSwitch";
-
 const NAV_ITEMS = [
   { id: "work", label: "Selected Work" },
   { id: "education", label: "Education" },
@@ -68,11 +66,7 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 bg-day-bg/95 text-day-ink backdrop-saturate-150 dark:bg-night-bg/95 dark:text-night-ink transition-[padding,box-shadow] duration-500 ease-editorial ${
-        scrolled
-          ? "shadow-[0_1px_0_0_theme(colors.day.border)] dark:shadow-[0_1px_0_0_theme(colors.night.border)]"
-          : ""
-      }`}
+      className={`sticky top-0 z-50 border-b border-day-border/80 bg-day-bg/90 text-day-ink backdrop-blur-xl dark:border-night-border/80 dark:bg-night-bg/90 dark:text-night-ink transition-[padding,box-shadow] duration-500 ease-editorial ${scrolled ? "shadow-[0_10px_40px_rgba(0,0,0,0.16)]" : ""}`}
     >
       <div
         className={`container-editorial flex items-center justify-between transition-[padding] duration-500 ease-editorial ${
@@ -82,7 +76,7 @@ export function Navbar() {
         <a
           href="#cover"
           onClick={handleNavClick("cover")}
-          className="font-serif text-xl tracking-wide text-day-burgundy dark:text-night-burgundy"
+          className="font-sans text-[22px] font-black tracking-[-0.08em] text-day-ink dark:text-night-ink"
         >
           Trisha
         </a>
@@ -94,7 +88,7 @@ export function Navbar() {
                 href={`#${item.id}`}
                 onClick={handleNavClick(item.id)}
                 aria-current={activeId === item.id ? "true" : undefined}
-                className={`relative pb-1 text-[12px] font-medium tracking-[0.14em] uppercase transition-colors duration-300 ease-editorial after:absolute after:-bottom-[1px] after:left-0 after:h-px after:bg-day-burgundy after:transition-all after:duration-300 after:ease-editorial dark:after:bg-night-burgundy ${
+                className={`relative pb-1 text-[11px] font-medium tracking-[0.12em] uppercase transition-colors duration-300 ease-editorial after:absolute after:-bottom-[1px] after:left-0 after:h-px after:bg-day-burgundy after:transition-all after:duration-300 ease-editorial dark:after:bg-night-burgundy ${
                   activeId === item.id
                     ? "text-day-burgundy after:w-full dark:text-night-burgundy"
                     : "text-day-ink/60 after:w-0 hover:text-day-ink hover:after:w-full dark:text-night-ink/60 dark:hover:text-night-ink"
@@ -106,11 +100,7 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:block">
-          <EditionSwitch />
-        </div>
-
-        <button
+        <div         <button
           type="button"
           onClick={() => setMenuOpen((o) => !o)}
           aria-expanded={menuOpen}
@@ -147,9 +137,6 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li className="pt-3">
-            <EditionSwitch />
-          </li>
         </ul>
       </div>
     </nav>

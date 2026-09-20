@@ -29,7 +29,7 @@ export function Cover() {
             animate="show"
             custom={0.08}
             variants={fadeUp}
-            className="absolute left-[2%] top-[7%] z-10 font-boldfat text-[clamp(5rem,12vw,11.5rem)] font-normal leading-[0.82] tracking-[-0.045em] text-white"
+            className="absolute left-[2%] top-[7%] z-10 font-boldfat text-[clamp(4.4rem,10.5vw,10rem)] font-normal leading-[0.82] tracking-[-0.045em] text-white"
             style={{ textShadow: "8px 9px 0 #5552B8, 13px 14px 0 rgba(64,59,164,.38)" }}
           >
             TRISHA
@@ -40,41 +40,41 @@ export function Cover() {
             animate="show"
             custom={0.18}
             variants={fadeUp}
-            className="absolute right-[4%] top-[7%] z-20 flex flex-col gap-1 text-right font-mager text-[clamp(1.1rem,2vw,1.8rem)] leading-[1.25] tracking-[0.015em] text-[#C9C8FF]"
+            className="absolute right-[4%] top-[8%] z-20 flex flex-col gap-1 text-right font-mager text-[clamp(1rem,1.7vw,1.5rem)] leading-[1.25] tracking-[0.015em] text-[#C9C8FF]"
           >
             <span>AI / ML</span>
             <span>FULL-STACK DEV</span>
             <span>ANDROID DEV</span>
           </motion.div>
 
-          <div className="absolute right-[3%] top-[27%] z-10 w-[min(38vw,510px)] min-w-[300px]">
+          <div className="absolute right-[3%] top-[28%] z-10 w-[min(34vw,470px)] min-w-[280px]">
             <Portrait />
           </div>
 
-          <div className="absolute left-[3%] top-[39%] z-20 w-[55%] text-center">
-            <motion.p initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="font-seasons text-[clamp(1.2rem,2.15vw,2rem)] italic leading-tight text-[#B9F0FF]">
+          <div className="absolute left-[3%] top-[40%] z-20 w-[53%] text-center">
+            <motion.p initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="font-seasons text-[clamp(1.05rem,1.7vw,1.6rem)] italic leading-tight text-[#B9F0FF]">
               Computer Science Engineering student at IGDTUW
             </motion.p>
-            <motion.p initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mx-auto mt-2 max-w-[780px] font-seasons text-[clamp(1.1rem,1.9vw,1.8rem)] leading-[1.25] text-[#B9F0FF]">
+            <motion.p initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mx-auto mt-2 max-w-[780px] font-seasons text-[clamp(1rem,1.6vw,1.5rem)] leading-[1.25] text-[#B9F0FF]">
               Passionate about AI, ML and building solutions that create real
               <br className="hidden sm:block" />
               impact.
             </motion.p>
-            <motion.div initial="hidden" animate="show" custom={0.38} variants={fadeUp} className="mt-5 font-mager text-[clamp(1.3rem,2.25vw,2rem)] tracking-[0.01em] text-[#C9C8FF]">
+            <motion.div initial="hidden" animate="show" custom={0.38} variants={fadeUp} className="mt-4 font-mager text-[clamp(1.05rem,1.65vw,1.55rem)] tracking-[0.01em] text-[#C9C8FF]">
               ENGINEER <span className="mx-1">|</span> LEARNER <span className="mx-1">|</span> BUILDER
             </motion.div>
 
-            <motion.div initial="hidden" animate="show" custom={0.46} variants={fadeUp} className="mt-7 flex justify-center gap-8">
-              <Button href="#work" variant="primary" icon={<ArrowRight size={17} />} className="min-w-[250px] bg-[#114879] px-6 py-4 font-seasons text-[clamp(1rem,1.65vw,1.45rem)] tracking-normal text-white shadow-none hover:bg-[#185789] hover:shadow-none">
+            <motion.div initial="hidden" animate="show" custom={0.46} variants={fadeUp} className="mt-6 flex justify-center gap-5">
+              <Button href="#work" variant="primary" icon={<ArrowRight size={17} />} className="min-w-[190px] bg-[#114879] px-5 py-3 font-seasons text-[clamp(.9rem,1.3vw,1.15rem)] tracking-normal text-white shadow-none hover:bg-[#185789] hover:shadow-none">
                 Explore My Work
               </Button>
-              <Button href="https://drive.google.com/file/d/1JD1s-Q_wNp6UQy0gHNjEXSBlgHfpulQm/view?usp=sharing" target="_blank" rel="noopener noreferrer" variant="secondary" icon={<ArrowUpRight size={17} />} className="min-w-[250px] border-4 border-[#31567B] bg-[#607888] px-6 py-4 font-seasons text-[clamp(1rem,1.65vw,1.45rem)] tracking-normal text-white hover:border-[#31567B] hover:bg-[#6B8393] hover:text-white">
+              <Button href="https://drive.google.com/file/d/1JD1s-Q_wNp6UQy0gHNjEXSBlgHfpulQm/view?usp=sharing" target="_blank" rel="noopener noreferrer" variant="secondary" icon={<ArrowUpRight size={17} />} className="min-w-[190px] border-2 border-[#31567B] bg-[#607888] px-5 py-3 font-seasons text-[clamp(.9rem,1.3vw,1.15rem)] tracking-normal text-white hover:border-[#31567B] hover:bg-[#6B8393] hover:text-white">
                 Resume
               </Button>
             </motion.div>
           </div>
 
-          <motion.p initial="hidden" animate="show" custom={0.58} variants={fadeUp} className="absolute bottom-[3%] left-[6%] z-20 font-seasons text-[clamp(1rem,1.65vw,1.45rem)] text-[#91DFFF]">
+          <motion.p initial="hidden" animate="show" custom={0.58} variants={fadeUp} className="absolute bottom-[3%] left-[6%] z-20 font-seasons text-[clamp(.9rem,1.3vw,1.15rem)] text-[#91DFFF]">
             CSE @ IGDTUW · 2025—2029 · NEW DELHI, INDIA
           </motion.p>
         </div>

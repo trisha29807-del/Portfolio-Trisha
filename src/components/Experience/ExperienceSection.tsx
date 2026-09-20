@@ -49,7 +49,7 @@ export function ExperienceSection() {
           </p>
         </motion.div>
 
-        <div className="mt-5 sm:mt-6>
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
@@ -110,7 +110,7 @@ export function ExperienceSection() {
 
             <div className="mt-4 h-px w-full bg-day-border dark:bg-night-border" />
 
-            <ul className="mt-6 flex flex-col gap-4>
+            <ul className="mt-6 flex flex-col gap-4">
               {project.bullets.map((b) => (
                 <li
                   key={b.bold}

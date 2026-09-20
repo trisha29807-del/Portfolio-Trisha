@@ -19,18 +19,18 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-day-bg text-day-ink transition-colors duration-700 ease-editorial dark:bg-night-bg dark:text-night-ink"
+      className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
       {/* oversized background numeral — subtle watermark, right side */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -top-8 right-0 select-none font-serif text-[22rem] leading-none text-day-ink/[0.035] dark:text-night-ink/[0.035] sm:text-[28rem]"
+        className="pointer-events-none absolute -top-8 right-0 select-none font-seasons text-[22rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[28rem]"
       >
         07
       </span>
 
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
-      <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-day-burgundy/15 dark:text-night-burgundy/20 lg:block" />
+      <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-[#B9B7FF]/15 dark:text-[#B9B7FF]/20 lg:block" />
 
       <div className="container-editorial relative py-16 sm:py-20">
         <div className="flex gap-6 sm:gap-10">
@@ -42,7 +42,7 @@ export function ContactSection() {
             variants={fadeUp}
             className="relative flex w-6 shrink-0 flex-col items-center sm:w-8"
           >
-            <span className="font-serif text-[15px] text-day-burgundy dark:text-night-burgundy">
+            <span className="font-seasons text-[15px] text-[#B9B7FF] dark:text-[#B9B7FF]">
               07
             </span>
             <span className="mt-6 h-2 w-2 rotate-45 border border-day-burgundy/50 dark:border-night-burgundy/50" />
@@ -57,7 +57,7 @@ export function ContactSection() {
               custom={0.05}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="inline-block text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy"
+              className="inline-block text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
             >
               Contact
             </motion.span>
@@ -68,12 +68,12 @@ export function ContactSection() {
               custom={0.1}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-3 font-boldfat text-[clamp(2.8rem,5.5vw,5.2rem)] leading-[1.08] text-day-ink dark:text-night-ink"
+              className="mt-3 font-boldfat text-[clamp(2.8rem,5.5vw,5.2rem)] leading-[1.08] text-white dark:text-white"
             >
               Let&rsquo;s build something
               <br />
               worth{" "}
-              <em className="font-serif italic text-day-burgundy dark:text-night-burgundy">
+              <em className="font-seasons italic text-[#B9B7FF] dark:text-[#B9B7FF]">
                 talking
               </em>{" "}
               about.
@@ -85,7 +85,7 @@ export function ContactSection() {
               custom={0.18}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-4 max-w-md text-[14px] leading-relaxed text-day-muted dark:text-night-muted"
+              className="mt-4 max-w-md text-[14px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]"
             >
               Open to opportunities, collaborations, interesting ideas, and
               conversations around technology.
@@ -114,7 +114,7 @@ export function ContactSection() {
               custom={0.34}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-day-border pt-8 dark:border-night-border sm:mt-12 sm:grid-cols-4 sm:gap-x-5 sm:pt-7"
+              className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[#294777] pt-8 dark:border-[#294777] sm:mt-12 sm:grid-cols-4 sm:gap-x-5 sm:pt-7"
             >
               <ContactRoute
                 icon={Mail}
@@ -146,10 +146,10 @@ export function ContactSection() {
       </div>
 
       {/* footer — closes the page */}
-      <footer className="relative border-t border-day-border dark:border-night-border">
-        <div className="container-editorial flex items-center justify-between py-5 text-[10px] tracking-[0.14em] uppercase text-day-muted dark:text-night-muted">
+      <footer className="relative border-t border-[#294777] dark:border-[#294777]">
+        <div className="container-editorial flex items-center justify-between py-5 text-[10px] tracking-[0.14em] uppercase text-[#AEBEDE] dark:text-[#AEBEDE]">
           <span>Designed &amp; Engineered by Trisha</span>
-          <CompassStar className="h-4 w-4 text-day-ink/40 dark:text-night-ink/40" />
+          <CompassStar className="h-4 w-4 text-white/40 dark:text-white/40" />
           <span>© 2026</span>
         </div>
       </footer>

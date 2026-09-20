@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
+  { id: "about", label: "About" },
   { id: "work", label: "Selected Work" },
   { id: "education", label: "Education" },
   { id: "skills", label: "Skills" },

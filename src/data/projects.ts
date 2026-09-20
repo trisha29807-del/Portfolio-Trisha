@@ -43,21 +43,6 @@ export const projects: Project[] = [
   },
   {
     number: "02",
-    slug: "synora",
-    name: "synora",
-    category: "Product / Web",
-    year: "2026",
-    title: "Synora",
-    description:
-      "An AI-powered engineering decision-intelligence platform that helps students and engineers make smarter decisions, track growth, and build their personal knowledge graph.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Firebase", "Vercel"],
-    githubUrl: "#",
-    liveUrl: "#",
-    caseStudyUrl: "#",
-    imageSide: "right",
-  },
-  {
-    number: "03",
     slug: "delhi-heritage-explorer",
     name: "delhi-heritage-explorer",
     category: "Web / Hackathon",
@@ -76,7 +61,7 @@ export const projects: Project[] = [
     imageSide: "left",
   },
   {
-    number: "04",
+    number: "03",
     slug: "foodbridge",
     name: "foodbridge",
     category: "Android · Mobile App",

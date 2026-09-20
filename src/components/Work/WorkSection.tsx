@@ -42,7 +42,7 @@ export function WorkSection() {
             variants={fadeUp}
           >
             <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
-              Selected Works
+              02 · Selected Works
             </span>
             <h2 className="mt-4 font-serif text-[clamp(2.25rem,5vw,3.75rem)] leading-[1.08] text-day-ink dark:text-night-ink">
               A collection of ideas,{" "}

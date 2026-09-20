@@ -52,15 +52,6 @@ export function EducationSection() {
       id="education"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      {/* oversized background typography — decorative, sub-4% opacity, never interferes with reading */}
-      <motion.span
-        aria-hidden="true"
-        style={{ y: bgY }}
-        className="pointer-events-none absolute -top-10 right-0 select-none font-seasons text-[26rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[34rem]"
-      >
-        03
-      </motion.span>
-
       <div className="container-editorial relative pt-2 sm:pt-3">
         {/* Section header */}
         <motion.div
@@ -70,7 +61,6 @@ export function EducationSection() {
           variants={fadeUp}
         >
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
-            03
           </span>
           <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-white dark:text-white">
             Education

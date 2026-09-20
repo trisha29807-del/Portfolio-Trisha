@@ -36,7 +36,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
       viewport={{ once: true, margin: "-10% 0px" }}
       transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
       style={{ y: parallaxY }}
-      className="relative aspect-[16/10] w-full overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(20,10,8,0.35)] dark:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]"
+      className="relative aspect-[16/9] w-full overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(20,10,8,0.35)] dark:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]"
     >
       <div className="h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-[1.02]">
         {mockup}
@@ -102,7 +102,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
         ))}
       </div>
 
-      <div className="mt-7 flex flex-wrap items-center gap-3">
+      <div className="mt-5 flex flex-wrap items-center gap-3">
         {project.primaryCta?.action === "toggle-detail" ? (
           <button
             type="button"
@@ -151,7 +151,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
       </div>
 
       {detail && project.primaryCta?.action !== "toggle-detail" && (
-        <div className="mt-6">
+        <div className="mt-4">
           <button
             type="button"
             onClick={() => setExpanded((e) => !e)}
@@ -174,10 +174,10 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
     <div
       ref={rowRef}
       id={project.slug}
-      className="group scroll-mt-24 border-t border-[#294777] py-10 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-[\#B9B7FF]/25 dark:border-[#294777] dark:hover:border-[\#B9B7FF]/25 sm:py-12"
+      className="group scroll-mt-24 border-t border-[#294777] py-6 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-[\#B9B7FF]/25 dark:border-[#294777] dark:hover:border-[\#B9B7FF]/25 sm:py-8"
     >
       <div className="container-editorial">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 items-center gap-7 lg:grid-cols-2 lg:gap-10">
           <div className={isImageLeft ? "lg:order-1" : "lg:order-2"}>
             {mockupBlock}
           </div>
@@ -196,7 +196,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
                 transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
                 className="overflow-hidden"
               >
-                <div className="mt-8 border-t border-[#294777] pt-8 dark:border-[#294777]">
+                <div className="mt-5 border-t border-[#294777] pt-8 dark:border-[#294777]">
                   {detail}
                 </div>
               </motion.div>

@@ -45,7 +45,7 @@ export function ContactSection() {
             <span className="font-seasons text-[15px] text-[#B9B7FF] dark:text-[#B9B7FF]">
               07
             </span>
-            <span className="mt-6 h-2 w-2 rotate-45 border border-day-burgundy/50 dark:border-night-burgundy/50" />
+            <span className="mt-6 h-2 w-2 rotate-45 border border-[\#B9B7FF]/50 dark:border-[\#B9B7FF]/50" />
             <span className="mt-6 w-px flex-1 bg-day-border dark:bg-night-border" />
           </motion.div>
 

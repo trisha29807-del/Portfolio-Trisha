@@ -37,7 +37,7 @@
 @layer base {
   :root {
     /* One knob for the whole page: the space between any two sections. */
-    --section-gap: clamp(3rem, 6vw, 5rem);
+    --section-gap: clamp(2.25rem, 4vw, 3.5rem);
     /* Sticky navbar height once scrolled — used as scroll offset for anchors. */
     --nav-offset: 4.2rem;
   }
@@ -92,38 +92,6 @@
     background-size: 100% 100%;
   }
 
-  /* Slow drifting glow behind the sections (visible through the transparent ones).
-     Cheap on purpose: radial gradients + transforms only, no blur filters. */
-  main {
-    isolation: isolate;
-  }
-
-  main::before,
-  main::after {
-    content: "";
-    position: fixed;
-    z-index: -1;
-    width: 42rem;
-    height: 42rem;
-    border-radius: 9999px;
-    pointer-events: none;
-    will-change: transform;
-  }
-
-  main::before {
-    top: 6%;
-    left: -14rem;
-    background: radial-gradient(circle, rgba(105, 119, 200, 0.22) 0, transparent 65%);
-    animation: portfolio-orb-a 28s ease-in-out infinite alternate;
-  }
-
-  main::after {
-    right: -16rem;
-    bottom: 2%;
-    background: radial-gradient(circle, rgba(49, 87, 139, 0.32) 0, transparent 65%);
-    animation: portfolio-orb-b 34s ease-in-out infinite alternate;
-  }
-
   main > section[id]:not(#cover) {
     position: relative;
     background: transparent !important;
@@ -135,20 +103,6 @@
   main > section[id]:not(#cover) > *:not([aria-hidden="true"]) {
     position: relative;
     z-index: 1;
-  }
-
-  @keyframes portfolio-orb-a {
-    0% { transform: translate3d(0, 0, 0) scale(1); }
-    35% { transform: translate3d(-7vw, 8vh, 0) scale(1.08); }
-    70% { transform: translate3d(-2vw, 17vh, 0) scale(0.94); }
-    100% { transform: translate3d(5vw, 7vh, 0) scale(1.04); }
-  }
-
-  @keyframes portfolio-orb-b {
-    0% { transform: translate3d(0, 0, 0) scale(0.96); }
-    40% { transform: translate3d(9vw, -8vh, 0) scale(1.08); }
-    75% { transform: translate3d(14vw, -2vh, 0) scale(0.92); }
-    100% { transform: translate3d(5vw, 10vh, 0) scale(1.02); }
   }
 
   /* Uniform section rhythm.
@@ -165,31 +119,12 @@
     padding-block: 0 !important;
   }
 
-  /* First section after the hero, and the page footer, get the full gap. */
-  main > #cover + section[id]:not(#cover) {
-    padding-top: var(--section-gap) !important;
-  }
-
   main > section#contact[id]:not(#cover) {
     padding-bottom: 0 !important;
   }
 
   main > section#contact[id]:not(#cover) > footer {
     margin-top: calc(var(--section-gap) / 2);
-  }
-
-  /* Nested case-study sections (inside Work) keep their original behaviour. */
-  section[id]:not(#cover) {
-    margin-block: 0 !important;
-    padding-block-end: 0 !important;
-  }
-
-  section[id]:not(#cover) + section[id]:not(#cover) {
-    margin-top: 0 !important;
-  }
-
-  section[id]:not(#cover) .container-editorial {
-    margin-bottom: 0;
   }
 
   /* Visible, elegant keyboard focus states — accessibility floor */
@@ -227,12 +162,5 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  main::before,
-  main::after {
-    animation: none !important;
   }
 }

@@ -26,6 +26,19 @@ export function ContactSection() {
 
       <div className="container-editorial relative py-4 sm:py-5">
         <div className="flex gap-6 sm:gap-10">
+          {/* left rail — number, vertical line, marker */}
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-15% 0px" }}
+            variants={fadeUp}
+            className="relative flex w-6 shrink-0 flex-col items-center sm:w-8"
+          >
+            <span className="font-seasons text-[15px] text-[#B9B7FF] dark:text-[#B9B7FF]">07</span>
+            <span className="mt-6 h-2 w-2 rotate-45 border border-[#B9B7FF]/50 dark:border-[#B9B7FF]/50" />
+            <span className="mt-6 w-px flex-1 bg-day-border dark:bg-night-border" />
+          </motion.div>
+
           {/* main content */}
           <div className="min-w-0 flex-1 pb-6 sm:pb-7">
             <motion.span

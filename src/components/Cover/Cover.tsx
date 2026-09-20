@@ -19,26 +19,28 @@ export function Cover() {
       id="cover"
       className="relative min-h-[calc(100vh-76px)] overflow-hidden bg-day-bg text-day-ink dark:bg-night-bg dark:text-night-ink"
     >
-      <div aria-hidden="true" className="pointer-events-none absolute -left-28 top-24 h-72 w-72 rounded-full bg-[#253B91]/35 blur-3xl" />
-      <div aria-hidden="true" className="pointer-events-none absolute right-[-8rem] top-[-7rem] h-[28rem] w-[28rem] rounded-full bg-[#6370FF]/20 blur-2xl" />
-      <div aria-hidden="true" className="pointer-events-none absolute bottom-[-12rem] left-[42%] h-[30rem] w-[30rem] rounded-full bg-[#355FFF]/10 blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute -left-[14rem] top-[7%] h-[30rem] w-[30rem] rounded-full border border-white/10 bg-white/[0.045] blur-[1px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute -right-[13rem] -top-[10rem] h-[42rem] w-[42rem] rounded-full bg-white/[0.055] blur-[2px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute right-[17%] top-[7%] h-[18rem] w-[18rem] rounded-full bg-[#B9B5FF]/[0.08] blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute -bottom-[16rem] left-[34%] h-[38rem] w-[38rem] rounded-full border border-white/[0.07] bg-white/[0.025] blur-[2px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute bottom-[10%] right-[8%] h-24 w-24 rounded-full bg-[#6EA8FF]/[0.14] blur-2xl" />
 
       <div className="container-editorial relative flex min-h-[calc(100vh-76px)] flex-col justify-between py-10 sm:py-14 lg:py-16">
         <div className="grid flex-1 items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
           <div className="relative z-10">
-            <motion.p initial="hidden" animate="show" custom={0.05} variants={fadeUp} className="mb-5 font-serif text-lg italic text-day-burgundy/90 dark:text-night-burgundy/90">
+            <motion.p initial="hidden" animate="show" custom={0.05} variants={fadeUp} className="mb-5 font-seasons text-[clamp(1.15rem,2.2vw,1.8rem)] leading-[1.15] text-day-burgundy/90 dark:text-night-burgundy/90">
               Computer Science Engineering student at IGDTUW
             </motion.p>
 
-            <motion.h1 initial="hidden" animate="show" custom={0.12} variants={fadeUp} className="font-sans text-[clamp(5rem,15vw,12rem)] font-black leading-[0.76] tracking-[-0.10em] text-day-ink dark:text-night-ink">
+            <motion.h1 initial="hidden" animate="show" custom={0.12} variants={fadeUp} className="font-boldfat text-[clamp(5.6rem,15vw,13rem)] font-normal leading-[0.72] tracking-[-0.055em] sm:whitespace-nowrap text-day-ink dark:text-night-ink">
               TRISHA
             </motion.h1>
 
-            <motion.p initial="hidden" animate="show" custom={0.22} variants={fadeUp} className="mt-8 max-w-2xl font-serif text-[clamp(1.35rem,3vw,2.35rem)] leading-[1.2] text-day-ink/90 dark:text-night-ink/90">
+            <motion.p initial="hidden" animate="show" custom={0.22} variants={fadeUp} className="mt-8 max-w-2xl font-seasons text-[clamp(1.2rem,2.45vw,2rem)] leading-[1.22] text-day-ink/90 dark:text-night-ink/90">
               Passionate about AI, ML and building solutions that create real impact.
             </motion.p>
 
-            <motion.div initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mt-8 flex flex-wrap gap-x-3 gap-y-2 font-serif text-[clamp(1.35rem,2.8vw,2.1rem)] tracking-tight text-day-burgundy dark:text-night-burgundy">
+            <motion.div initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 font-mager text-[clamp(1.15rem,2.25vw,1.85rem)] tracking-[0.045em] text-day-burgundy dark:text-night-burgundy">
               <span>ENGINEER</span><span>/</span><span>LEARNER</span><span>/</span><span>BUILDER</span>
             </motion.div>
 
@@ -62,13 +64,13 @@ export function Cover() {
             </motion.div>
           </div>
 
-          <div className="relative z-10 flex flex-col items-center justify-center gap-8 lg:items-end">
-            <motion.div initial="hidden" animate="show" custom={0.15} variants={fadeUp} className="grid grid-cols-1 gap-2 text-center font-serif text-[clamp(1.35rem,2.7vw,2rem)] leading-tight text-day-burgundy dark:text-night-burgundy lg:mr-10 lg:text-right">
+          <div className="relative z-10 flex flex-col items-center justify-center gap-7 lg:items-end">
+            <motion.div initial="hidden" animate="show" custom={0.15} variants={fadeUp} className="grid grid-cols-1 gap-1.5 text-center font-mager text-[clamp(1.15rem,2.2vw,1.8rem)] leading-tight tracking-[0.06em] text-day-burgundy dark:text-night-burgundy lg:mr-10 lg:text-right">
               <span>AI / ML</span>
               <span>FULL-STACK DEV</span>
               <span>ANDROID DEV</span>
             </motion.div>
-            <div className="w-full max-w-[520px]">
+            <div className="w-full max-w-[500px]">
               <Portrait />
             </div>
           </div>

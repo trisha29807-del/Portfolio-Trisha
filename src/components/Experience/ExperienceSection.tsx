@@ -49,12 +49,12 @@ export function ExperienceSection() {
           </p>
         </motion.div>
 
-        <div className="mt-3 sm:mt-4">
+        <div className="mt-5 sm:mt-6>
           <AnimatedDivider />
         </div>
 
         {/* Three-column editorial composition */}
-        <div className="grid grid-cols-1 gap-8 py-5 sm:py-6 lg:grid-cols-[220px_1fr_240px] lg:gap-8">
+        <div className="grid grid-cols-1 gap-14 py-6 sm:py-8 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
           {/* LEFT — date / role / org, with a timeline marker */}
           <motion.div
             initial="hidden"
@@ -75,7 +75,7 @@ export function ExperienceSection() {
               {experience.role}
             </h3>
 
-            <div className="mt-4 h-px w-8 bg-day-border dark:bg-night-border" />
+            <div className="mt-6 h-px w-8 bg-day-border dark:bg-night-border" />
 
             <p className="mt-4 text-[15px] text-white dark:text-white">
               {experience.org}
@@ -110,7 +110,7 @@ export function ExperienceSection() {
 
             <div className="mt-4 h-px w-full bg-day-border dark:bg-night-border" />
 
-            <ul className="mt-4 flex flex-col gap-3">
+            <ul className="mt-6 flex flex-col gap-4>
               {project.bullets.map((b) => (
                 <li
                   key={b.bold}
@@ -128,7 +128,7 @@ export function ExperienceSection() {
               ))}
             </ul>
 
-            <div className="mt-5">
+            <div className="mt-8">
               <ProjectPreview />
             </div>
           </motion.div>
@@ -147,7 +147,7 @@ export function ExperienceSection() {
               return (
                 <div
                   key={item.number}
-                  className={`group/meta py-3 ${
+                  className={`group/meta py-5 ${
                     i > 0 ? "border-t border-[#294777] dark:border-[#294777]" : "pt-0"
                   }`}
                 >
@@ -185,9 +185,9 @@ export function ExperienceSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-4 pt-1 text-center sm:pb-5"
+        className="container-editorial relative pb-6 pt-2 text-center sm:pb-5"
       >
-        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.1rem,2vw,1.45rem)] italic leading-relaxed text-white dark:text-white">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Real-world problems. Real impact.
           <br />
           That&rsquo;s where growth happens.

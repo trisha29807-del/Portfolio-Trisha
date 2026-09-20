@@ -26,6 +26,7 @@ export function AboutSection() {
         <div className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-15% 0px" }} variants={fadeUp}>
             <div className="flex items-center gap-4 text-[#B9F0FF]">
+              <span className="font-seasons text-sm">01</span>
               <span className="h-px w-14 bg-[#7C8EDB]" />
               <span className="font-mager text-xs tracking-[0.18em]">ABOUT ME</span>
             </div>
@@ -61,6 +62,7 @@ export function AboutSection() {
             >
               <div className="flex items-center justify-between">
                 <Icon size={22} strokeWidth={1.4} className="text-[#B9B7FF]" />
+                <span className="font-seasons text-sm text-[#7FDFFF]">0{i + 1}</span>
               </div>
               <h3 className="mt-8 font-mager text-xl tracking-wide text-[#D2D0FF]">{label}</h3>
               <p className="mt-3 text-sm leading-6 text-[#AEBEDE]">{text}</p>

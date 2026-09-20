@@ -40,18 +40,18 @@ export function Cover() {
             animate="show"
             custom={0.18}
             variants={fadeUp}
-            className="absolute right-[4%] top-[8%] z-20 flex flex-col gap-1 text-right font-mager text-[clamp(1rem,1.7vw,1.5rem)] leading-[1.25] tracking-[0.015em] text-[#C9C8FF]"
+            className="absolute right-[5%] top-[8%] z-20 flex flex-col gap-1 text-right font-mager text-[clamp(1rem,1.7vw,1.5rem)] leading-[1.25] tracking-[0.015em] text-[#C9C8FF]"
           >
             <span>AI / ML</span>
             <span>FULL-STACK DEV</span>
             <span>ANDROID DEV</span>
           </motion.div>
 
-          <div className="absolute right-[3%] top-[28%] z-10 w-[min(34vw,470px)] min-w-[280px]">
+          <div className="absolute right-[7%] top-[25%] z-10 w-[min(31vw,430px)] min-w-[260px] md:right-[7%] lg:right-[8%]">
             <Portrait />
           </div>
 
-          <div className="absolute left-[3%] top-[40%] z-20 w-[53%] text-center">
+          <div className="absolute left-[3%] top-[42%] z-20 w-[54%] max-w-[700px] text-center">
             <motion.p initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="font-seasons text-[clamp(1.05rem,1.7vw,1.6rem)] italic leading-tight text-[#B9F0FF]">
               Computer Science Engineering student at IGDTUW
             </motion.p>

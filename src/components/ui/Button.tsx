@@ -30,9 +30,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-day-burgundy text-day-bg shadow-[0_1px_2px_rgba(122,22,38,0)] hover:shadow-[0_10px_24px_-8px_rgba(122,22,38,0.45)] hover:-translate-y-px hover:bg-day-burgundy/95 dark:bg-night-burgundy dark:text-night-bg dark:hover:shadow-[0_10px_24px_-8px_rgba(199,73,92,0.35)] dark:hover:bg-night-burgundy/95",
+    "bg-day-burgundy text-day-bg shadow-[0_10px_30px_-12px_rgba(185,181,255,0.65)] hover:shadow-[0_16px_38px_-12px_rgba(185,181,255,0.75)] hover:-translate-y-px hover:bg-day-burgundy/95 dark:bg-night-burgundy dark:text-night-bg dark:hover:shadow-[0_16px_38px_-12px_rgba(185,181,255,0.55)] dark:hover:bg-night-burgundy/95",
   secondary:
-    "border border-day-ink/70 text-day-ink hover:-translate-y-px hover:border-day-ink hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-night-ink dark:hover:border-night-ink dark:hover:bg-night-ink dark:hover:text-night-bg",
+    "border border-day-burgundy/70 text-day-ink hover:-translate-y-px hover:border-day-burgundy hover:bg-day-burgundy hover:text-day-bg dark:border-night-burgundy/70 dark:text-night-ink dark:hover:border-night-burgundy dark:hover:bg-night-burgundy dark:hover:text-night-bg",
 };
 
 export function Button({

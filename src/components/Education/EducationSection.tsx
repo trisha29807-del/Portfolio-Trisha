@@ -61,7 +61,7 @@ export function EducationSection() {
         03
       </motion.span>
 
-      <div className="container-editorial relative pt-20 sm:pt-28">
+      <div className="container-editorial relative pt-12 sm:pt-16">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -80,12 +80,12 @@ export function EducationSection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 sm:mt-16">
+        <div className="mt-7 sm:mt-9">
           <AnimatedDivider />
         </div>
 
         {/* Main composition — degree left, university right */}
-        <div className="grid grid-cols-1 gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 gap-12 py-9 sm:py-12 lg:grid-cols-2 lg:gap-20">
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -142,7 +142,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Academic Foundation */}
-        <div className="py-16 sm:py-20">
+        <div className="py-9 sm:py-12">
           <motion.span
             initial="hidden"
             whileInView="show"
@@ -176,7 +176,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Academic Highlights */}
-        <div className="py-16 sm:py-20">
+        <div className="py-9 sm:py-12">
           <motion.span
             initial="hidden"
             whileInView="show"
@@ -187,7 +187,7 @@ export function EducationSection() {
             Academic Highlights
           </motion.span>
 
-          <div className="mt-10 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
+          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
             {highlights.map((h, i) => (
               <motion.div
                 key={h.label}
@@ -211,7 +211,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Currently Exploring */}
-        <div className="py-16 sm:py-20">
+        <div className="py-9 sm:py-12">
           <motion.span
             initial="hidden"
             whileInView="show"

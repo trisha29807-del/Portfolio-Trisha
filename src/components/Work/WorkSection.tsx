@@ -3,16 +3,15 @@ import type { ComponentType } from "react";
 import { projects } from "@/data/projects";
 import { ProjectRow } from "./ProjectRow";
 import { FakeNewsMockup } from "./mockups/FakeNewsMockup";
-import { SynoraMockup } from "./mockups/SynoraMockup";
 import { DelhiMockup } from "./mockups/DelhiMockup";
 import { FoodBridgeMockup } from "./mockups/FoodBridgeMockup";
 import { FakeNewsDetail } from "./details/FakeNewsDetail";
 import { FoodBridgeDetail } from "./details/foodbridge/FoodBridgeDetail";
 import { DelhiHeritageDetail } from "./details/delhi-heritage-explorer/DelhiHeritageDetail";
 
-const mockups = [FakeNewsMockup, SynoraMockup, DelhiMockup, FoodBridgeMockup];
+const mockups = [FakeNewsMockup, DelhiMockup, FoodBridgeMockup];
 
-// Only Project 01 has a detailed breakdown right now — others render normally.
+// Detailed case studies are available for the completed projects.
 const details: Record<string, ComponentType> = {
   "fake-news-detection": FakeNewsDetail,
   foodbridge: FoodBridgeDetail,

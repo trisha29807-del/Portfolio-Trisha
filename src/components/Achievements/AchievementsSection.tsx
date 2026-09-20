@@ -50,7 +50,7 @@ export function AchievementsSection() {
         </div>
 
         {/* Numbered editorial timeline */}
-        <div className="relative py-9 sm:py-11>
+        <div className="relative py-9 sm:py-11">
           <div className="absolute left-[3px] top-3 bottom-3 w-px bg-[#7FDFFF]/15 dark:bg-[#7FDFFF]/15" />
 
           <div className="flex flex-col">
@@ -77,7 +77,7 @@ export function AchievementsSection() {
                     m.featured ? "sm:gap-12" : "sm:gap-10"
                   }`}
                 >
-                  <div className={m.featured ? "border-l-2 border-[\#B9B7FF]/30 pl-6 dark:border-[\#B9B7FF]/30" : ""}>
+                  <div className={m.featured ? "border-l-2 border-[#B9B7FF]/30 pl-6 dark:border-[#B9B7FF]/30" : ""}>
                     <div className="flex items-baseline gap-4">
                       <span
                         className={`font-seasons leading-none text-[#B9B7FF]/70 dark:text-[#B9B7FF]/70 ${

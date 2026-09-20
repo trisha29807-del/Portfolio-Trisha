@@ -21,34 +21,11 @@ export function ContactSection() {
       id="contact"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      {/* oversized background numeral — subtle watermark, right side */}
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-8 right-0 select-none font-seasons text-[22rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[28rem]"
-      >
-        07
-      </span>
-
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
       <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-[#B9B7FF]/15 dark:text-[#B9B7FF]/20 lg:block" />
 
       <div className="container-editorial relative py-4 sm:py-5">
         <div className="flex gap-6 sm:gap-10">
-          {/* left rail — number, vertical line, marker */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-15% 0px" }}
-            variants={fadeUp}
-            className="relative flex w-6 shrink-0 flex-col items-center sm:w-8"
-          >
-            <span className="font-seasons text-[15px] text-[#B9B7FF] dark:text-[#B9B7FF]">
-              07
-            </span>
-            <span className="mt-6 h-2 w-2 rotate-45 border border-[\#B9B7FF]/50 dark:border-[\#B9B7FF]/50" />
-            <span className="mt-6 w-px flex-1 bg-day-border dark:bg-night-border" />
-          </motion.div>
-
           {/* main content */}
           <div className="min-w-0 flex-1 pb-6 sm:pb-7">
             <motion.span

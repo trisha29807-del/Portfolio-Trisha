@@ -30,18 +30,7 @@ export function ExperienceSection() {
       id="experience"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      {/* oversized background numeral, centered/integrated like Education & Skills */}
-      <motion.div
-        aria-hidden="true"
-        style={{ y: bgY }}
-        className="pointer-events-none absolute inset-x-0 top-[10%] flex justify-end pr-4 sm:pr-12"
-      >
-        <span className="select-none font-seasons text-[22rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[28rem]">
-          05
-        </span>
-      </motion.div>
-
-      <div className="container-editorial relative pt-12 sm:pt-16">
+      <div className="container-editorial relative pt-7 sm:pt-9">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -60,12 +49,12 @@ export function ExperienceSection() {
           </p>
         </motion.div>
 
-        <div className="mt-7 sm:mt-9">
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
         {/* Three-column editorial composition */}
-        <div className="grid grid-cols-1 gap-14 py-9 sm:py-12 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
+        <div className="grid grid-cols-1 gap-14 py-6 sm:py-8 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
           {/* LEFT — date / role / org, with a timeline marker */}
           <motion.div
             initial="hidden"
@@ -196,7 +185,7 @@ export function ExperienceSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
+        className="container-editorial relative pb-6 pt-2 text-center sm:pb-8"
       >
         <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Real-world problems. Real impact.

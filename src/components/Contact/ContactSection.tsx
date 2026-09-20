@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Linkedin, Github } from "lucide-react";
+import { ArrowRight, Mail, Linkedin, Github, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { CompassStar } from "@/components/Cover/CompassStar";
 import { contact } from "@/data/contact";
@@ -32,7 +32,7 @@ export function ContactSection() {
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
       <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-day-burgundy/15 dark:text-night-burgundy/20 lg:block" />
 
-      <div className="container-editorial relative pt-20 sm:pt-28">
+      <div className="container-editorial relative py-16 sm:py-20">
         <div className="flex gap-6 sm:gap-10">
           {/* left rail — number, vertical line, marker */}
           <motion.div
@@ -50,7 +50,7 @@ export function ContactSection() {
           </motion.div>
 
           {/* main content */}
-          <div className="min-w-0 flex-1 pb-24 sm:pb-32">
+          <div className="min-w-0 flex-1 pb-10 sm:pb-12">
             <motion.span
               initial="hidden"
               whileInView="show"
@@ -68,7 +68,7 @@ export function ContactSection() {
               custom={0.1}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-4 font-serif text-[clamp(2.25rem,5.5vw,4rem)] leading-[1.08] text-day-ink dark:text-night-ink"
+              className="mt-3 font-boldfat text-[clamp(2.8rem,5.5vw,5.2rem)] leading-[1.08] text-day-ink dark:text-night-ink"
             >
               Let&rsquo;s build something
               <br />
@@ -85,7 +85,7 @@ export function ContactSection() {
               custom={0.18}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-6 max-w-md text-[15px] leading-relaxed text-day-muted dark:text-night-muted"
+              className="mt-4 max-w-md text-[14px] leading-relaxed text-day-muted dark:text-night-muted"
             >
               Open to opportunities, collaborations, interesting ideas, and
               conversations around technology.
@@ -97,7 +97,7 @@ export function ContactSection() {
               custom={0.26}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-9"
+              className="mt-7"
             >
               <Button
                 href={`mailto:${contact.email}`}
@@ -114,7 +114,7 @@ export function ContactSection() {
               custom={0.34}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-16 flex flex-col border-t border-day-border pt-8 dark:border-night-border sm:mt-20 sm:flex-row sm:pt-10"
+              className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-day-border pt-8 dark:border-night-border sm:mt-12 sm:grid-cols-4 sm:gap-x-5 sm:pt-7"
             >
               <ContactRoute
                 icon={Mail}
@@ -134,6 +134,12 @@ export function ContactSection() {
                 value={contact.github.display}
                 href={contact.github.url}
               />
+              <ContactRoute
+                icon={Code2}
+                label="LeetCode"
+                value={contact.leetcode.display}
+                href={contact.leetcode.url}
+              />
             </motion.div>
           </div>
         </div>
@@ -141,7 +147,7 @@ export function ContactSection() {
 
       {/* footer — closes the page */}
       <footer className="relative border-t border-day-border dark:border-night-border">
-        <div className="container-editorial flex items-center justify-between py-6 text-[11px] tracking-[0.14em] uppercase text-day-muted dark:text-night-muted">
+        <div className="container-editorial flex items-center justify-between py-5 text-[10px] tracking-[0.14em] uppercase text-day-muted dark:text-night-muted">
           <span>Designed &amp; Engineered by Trisha</span>
           <CompassStar className="h-4 w-4 text-day-ink/40 dark:text-night-ink/40" />
           <span>© 2026</span>

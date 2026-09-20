@@ -36,8 +36,8 @@ export function SkillsSection() {
         style={{ y: bgY }}
         className="pointer-events-none absolute inset-x-0 top-[22%] flex justify-center"
       >
-        <span className="select-none font-serif text-[30rem] leading-none text-day-ink/[0.03] dark:text-night-ink/[0.03] sm:text-[38rem]">
-          03
+        <span className="select-none font-serif text-[30rem] leading-none text-day-ink/[0.04] dark:text-night-ink/[0.04] sm:text-[38rem]">
+          04
         </span>
       </motion.div>
 
@@ -50,7 +50,7 @@ export function SkillsSection() {
           variants={fadeUp}
         >
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
-            03
+            04
           </span>
           <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-day-ink dark:text-night-ink">
             Skills

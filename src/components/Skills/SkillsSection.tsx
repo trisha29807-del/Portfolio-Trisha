@@ -41,15 +41,15 @@ export function SkillsSection() {
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             04
           </span>
-          <h2 className="mt-5 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
+          <h2 className="mt-4 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
             Skills
           </h2>
-          <p className="mt-6 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
+          <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
             The tools behind what I build.
           </p>
         </motion.div>
 
-        <div className="mt-8 sm:mt-9">
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
@@ -57,7 +57,7 @@ export function SkillsSection() {
             items-start lets each panel keep its own natural height, so
             AI & ML (more tags) and the CS list panel read taller than
             their neighbours instead of being stretched to match. */}
-        <div className="grid grid-cols-1 items-start gap-7 py-10 sm:grid-cols-2 sm:gap-8 sm:py-14 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-5 py-9 sm:grid-cols-2 sm:py-12 lg:grid-cols-3">
           {skillCategories.map((category, i) => (
             <SkillPanel
               key={category.number}

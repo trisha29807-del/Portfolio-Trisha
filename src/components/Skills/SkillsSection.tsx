@@ -28,7 +28,7 @@ export function SkillsSection() {
     <section
       ref={sectionRef}
       id="skills"
-      className="relative overflow-hidden bg-day-bg text-day-ink transition-colors duration-700 ease-editorial dark:bg-night-bg dark:text-night-ink"
+      className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
       {/* oversized background typography — centered behind the panel grid, integrated rather than corner-cropped */}
       <motion.div
@@ -36,7 +36,7 @@ export function SkillsSection() {
         style={{ y: bgY }}
         className="pointer-events-none absolute inset-x-0 top-[22%] flex justify-center"
       >
-        <span className="select-none font-serif text-[30rem] leading-none text-day-ink/[0.04] dark:text-night-ink/[0.04] sm:text-[38rem]">
+        <span className="select-none font-seasons text-[30rem] leading-none text-white/[0.04] dark:text-white/[0.04] sm:text-[38rem]">
           04
         </span>
       </motion.div>
@@ -49,13 +49,13 @@ export function SkillsSection() {
           viewport={{ once: true, margin: "-15% 0px" }}
           variants={fadeUp}
         >
-          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
+          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             04
           </span>
-          <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-day-ink dark:text-night-ink">
+          <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-white dark:text-white">
             Skills
           </h2>
-          <p className="mt-5 max-w-[38ch] font-serif text-[19px] italic leading-relaxed text-day-muted dark:text-night-muted">
+          <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
             The tools behind what I build.
           </p>
         </motion.div>
@@ -89,7 +89,7 @@ export function SkillsSection() {
         variants={fadeUp}
         className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
       >
-        <p className="mx-auto max-w-xl font-serif text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-day-ink dark:text-night-ink">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Tools matter.
           <br />
           What you build with them matters more.

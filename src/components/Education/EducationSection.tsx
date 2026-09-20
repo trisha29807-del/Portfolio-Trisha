@@ -50,13 +50,13 @@ export function EducationSection() {
     <section
       ref={sectionRef}
       id="education"
-      className="relative overflow-hidden bg-day-bg text-day-ink transition-colors duration-700 ease-editorial dark:bg-night-bg dark:text-night-ink"
+      className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
       {/* oversized background typography — decorative, sub-4% opacity, never interferes with reading */}
       <motion.span
         aria-hidden="true"
         style={{ y: bgY }}
-        className="pointer-events-none absolute -top-10 right-0 select-none font-serif text-[26rem] leading-none text-day-ink/[0.035] dark:text-night-ink/[0.035] sm:text-[34rem]"
+        className="pointer-events-none absolute -top-10 right-0 select-none font-seasons text-[26rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[34rem]"
       >
         03
       </motion.span>
@@ -69,13 +69,13 @@ export function EducationSection() {
           viewport={{ once: true, margin: "-15% 0px" }}
           variants={fadeUp}
         >
-          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
+          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             03
           </span>
-          <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-day-ink dark:text-night-ink">
+          <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-white dark:text-white">
             Education
           </h2>
-          <p className="mt-5 max-w-[38ch] font-serif text-[19px] italic leading-relaxed text-day-muted dark:text-night-muted">
+          <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
             Every engineer begins with curiosity.
           </p>
         </motion.div>
@@ -95,17 +95,17 @@ export function EducationSection() {
             className="flex flex-col gap-6"
           >
             <div>
-              <h3 className="font-serif text-[clamp(1.5rem,2.6vw,2rem)] leading-tight text-day-ink dark:text-night-ink">
+              <h3 className="font-seasons text-[clamp(1.5rem,2.6vw,2rem)] leading-tight text-white dark:text-white">
                 Bachelor of Technology
               </h3>
-              <p className="mt-1 font-serif text-[clamp(1.15rem,2vw,1.5rem)] italic text-day-burgundy dark:text-night-burgundy">
+              <p className="mt-1 font-seasons text-[clamp(1.15rem,2vw,1.5rem)] italic text-[#B9B7FF] dark:text-[#B9B7FF]">
                 Computer Science Engineering
               </p>
-              <p className="mt-3 text-[13px] tracking-wide text-day-muted dark:text-night-muted">
+              <p className="mt-3 text-[13px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
                 2025 — 2029
               </p>
             </div>
-            <p className="max-w-md text-[15px] leading-relaxed text-day-muted dark:text-night-muted">
+            <p className="max-w-md text-[15px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
               I&rsquo;m currently in my second year, building strong
               computer-science fundamentals while translating ideas into
               real, working products — from AI systems to full-stack
@@ -127,12 +127,12 @@ export function EducationSection() {
               className="h-20 w-20 shrink-0 object-contain sm:h-24 sm:w-24"
             />
             <div className="pt-1">
-              <h4 className="font-serif text-[clamp(1.25rem,2.2vw,1.625rem)] leading-tight text-day-ink dark:text-night-ink">
+              <h4 className="font-seasons text-[clamp(1.25rem,2.2vw,1.625rem)] leading-tight text-white dark:text-white">
                 Indira Gandhi Delhi
                 <br />
                 Technical University for Women
               </h4>
-              <p className="mt-3 text-[13px] tracking-wide text-day-muted dark:text-night-muted">
+              <p className="mt-3 text-[13px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
                 New Delhi, India
               </p>
             </div>
@@ -148,7 +148,7 @@ export function EducationSection() {
             whileInView="show"
             viewport={{ once: true, margin: "-10% 0px" }}
             variants={fadeUp}
-            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy"
+            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
           >
             Academic Foundation
           </motion.span>
@@ -162,11 +162,11 @@ export function EducationSection() {
                 custom={0.04 * i}
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
-                className="group relative border-b border-day-border py-4 dark:border-night-border sm:py-5"
+                className="group relative border-b border-[#294777] py-4 dark:border-[#294777] sm:py-5"
               >
-                <span className="relative text-[15px] text-day-ink dark:text-night-ink">
+                <span className="relative text-[15px] text-white dark:text-white">
                   {subject}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-day-burgundy transition-all duration-300 ease-editorial group-hover:w-full dark:bg-night-burgundy" />
+                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#7FDFFF] transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:w-full dark:bg-[#7FDFFF]" />
                 </span>
               </motion.div>
             ))}
@@ -182,7 +182,7 @@ export function EducationSection() {
             whileInView="show"
             viewport={{ once: true, margin: "-10% 0px" }}
             variants={fadeUp}
-            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy"
+            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
           >
             Academic Highlights
           </motion.span>
@@ -197,10 +197,10 @@ export function EducationSection() {
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
               >
-                <div className="font-serif text-[clamp(3rem,7vw,5.5rem)] leading-none text-day-burgundy dark:text-night-burgundy">
+                <div className="font-seasons text-[clamp(3rem,7vw,5.5rem)] leading-none text-[#B9B7FF] dark:text-[#B9B7FF]">
                   {h.value}
                 </div>
-                <p className="mt-3 text-[14px] tracking-wide text-day-muted dark:text-night-muted">
+                <p className="mt-3 text-[14px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
                   {h.label}
                 </p>
               </motion.div>
@@ -217,7 +217,7 @@ export function EducationSection() {
             whileInView="show"
             viewport={{ once: true, margin: "-10% 0px" }}
             variants={fadeUp}
-            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy"
+            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
           >
             Currently Exploring
           </motion.span>
@@ -231,7 +231,7 @@ export function EducationSection() {
                 custom={0.06 * i}
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
-                className="rounded-md border border-day-burgundy/35 px-4 py-2 font-serif text-[14px] text-day-ink transition-colors duration-300 ease-editorial hover:bg-day-burgundy/[0.06] dark:border-night-burgundy/40 dark:text-night-ink dark:hover:bg-night-burgundy/[0.08]"
+                className="rounded-md border border-day-burgundy/35 px-4 py-2 font-seasons text-[14px] text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:bg-[#7FDFFF]/[0.06] dark:border-night-burgundy/40 dark:text-white dark:hover:bg-night-burgundy/[0.08]"
               >
                 {tag}
               </motion.span>
@@ -249,7 +249,7 @@ export function EducationSection() {
         variants={fadeUp}
         className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
       >
-        <p className="mx-auto max-w-xl font-serif text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-day-ink dark:text-night-ink">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Learning in the classroom.
           <br />
           Building beyond it.

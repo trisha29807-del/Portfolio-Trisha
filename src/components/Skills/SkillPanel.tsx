@@ -39,7 +39,7 @@ export function SkillPanel({ category, icon: Icon, delay = 0 }: SkillPanelProps)
       viewport={{ once: true, margin: "-10% 0px" }}
       variants={fadeUp}
       onMouseLeave={() => setActiveContext(null)}
-      className="group flex h-full flex-col rounded-lg border border-day-border bg-day-bg/60 p-6 transition-all duration-300 ease-editorial hover:-translate-y-[3px] hover:border-day-burgundy/40 hover:shadow-[0_16px_36px_-20px_rgba(122,22,38,0.22)] dark:border-night-border dark:bg-night-bg/40 dark:hover:border-night-burgundy/40 dark:hover:shadow-[0_16px_36px_-20px_rgba(199,73,92,0.22)]"
+      className="group flex h-full flex-col rounded-lg border border-day-border bg-day-bg/60 p-4 transition-all duration-300 ease-editorial hover:-translate-y-[3px] hover:border-day-burgundy/40 hover:shadow-[0_16px_36px_-20px_rgba(122,22,38,0.22)] dark:border-night-border dark:bg-night-bg/40 dark:hover:border-night-burgundy/40 dark:hover:shadow-[0_16px_36px_-20px_rgba(199,73,92,0.22)]"
     >
       {/* header */}
       <div className="flex items-start justify-between">
@@ -58,14 +58,14 @@ export function SkillPanel({ category, icon: Icon, delay = 0 }: SkillPanelProps)
 
       {/* skills */}
       {isList ? (
-        <div className="mt-5 flex flex-col">
+        <div className="mt-3 flex flex-col">
           {category.skills.map((skill, i) => (
             <motion.div
               key={skill.name}
               custom={delay + 0.05 * i}
               variants={tagFade}
               onMouseEnter={() => skill.context && setActiveContext(skill.context)}
-              className={`border-b border-day-border py-3 text-[14px] text-day-ink transition-colors duration-200 ease-editorial first:pt-0 last:border-b-0 dark:border-night-border dark:text-night-ink ${
+              className={`border-b border-day-border py-2 text-[14px] text-day-ink transition-colors duration-200 ease-editorial first:pt-0 last:border-b-0 dark:border-night-border dark:text-night-ink ${
                 skill.context
                   ? "cursor-default hover:text-day-burgundy dark:hover:text-night-burgundy"
                   : ""
@@ -76,14 +76,14 @@ export function SkillPanel({ category, icon: Icon, delay = 0 }: SkillPanelProps)
           ))}
         </div>
       ) : (
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           {category.skills.map((skill, i) => (
             <motion.span
               key={skill.name}
               custom={delay + 0.04 * i}
               variants={tagFade}
               onMouseEnter={() => skill.context && setActiveContext(skill.context)}
-              className={`rounded-md border px-3.5 py-2 text-[13.5px] font-medium transition-all duration-200 ease-editorial ${
+              className={`rounded-md border px-3 py-1.5 text-[13px] font-medium transition-all duration-200 ease-editorial ${
                 skill.context
                   ? "cursor-default border-day-border text-day-ink hover:-translate-y-0.5 hover:border-day-burgundy/45 hover:bg-day-burgundy/[0.07] dark:border-night-border dark:text-night-ink dark:hover:border-night-burgundy/45 dark:hover:bg-night-burgundy/[0.09]"
                   : "border-day-border/70 text-day-ink/85 hover:-translate-y-0.5 hover:border-day-burgundy/30 hover:bg-day-burgundy/[0.04] dark:border-night-border/70 dark:text-night-ink/85 dark:hover:border-night-burgundy/30 dark:hover:bg-night-burgundy/[0.06]"

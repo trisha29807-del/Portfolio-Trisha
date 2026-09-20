@@ -26,7 +26,7 @@ export function ContactSection() {
         aria-hidden="true"
         className="pointer-events-none absolute -top-8 right-0 select-none font-serif text-[22rem] leading-none text-day-ink/[0.035] dark:text-night-ink/[0.035] sm:text-[28rem]"
       >
-        06
+        07
       </span>
 
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
@@ -43,7 +43,7 @@ export function ContactSection() {
             className="relative flex w-6 shrink-0 flex-col items-center sm:w-8"
           >
             <span className="font-serif text-[15px] text-day-burgundy dark:text-night-burgundy">
-              06
+              07
             </span>
             <span className="mt-6 h-2 w-2 rotate-45 border border-day-burgundy/50 dark:border-night-burgundy/50" />
             <span className="mt-6 w-px flex-1 bg-day-border dark:bg-night-border" />

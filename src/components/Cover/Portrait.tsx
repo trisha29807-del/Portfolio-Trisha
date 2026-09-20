@@ -29,7 +29,11 @@ export function Portrait() {
           transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
         />
         <div className="relative h-full w-full overflow-hidden rounded-full border-[3px] border-[#D7D4FF] bg-[#0A1640] p-0.5 shadow-[0_0_48px_rgba(133,145,255,0.34),0_0_100px_rgba(73,92,220,0.16)]">
-          <img src={portrait} alt="Portrait of Trisha" className="h-full w-full rounded-full object-cover object-center" />
+          <img
+            src={portrait}
+            alt="Portrait of Trisha"
+            className="h-full w-full rounded-full object-cover object-[center_38%] scale-[1.1]"
+          />
         </div>
       </motion.div>
     </div>

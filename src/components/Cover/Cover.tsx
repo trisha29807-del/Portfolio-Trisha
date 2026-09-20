@@ -42,7 +42,7 @@ export function Cover() {
             animate="show"
             custom={0.1}
             variants={fadeUp}
-            className="absolute left-[3%] top-[17%] z-10 w-[58%] text-center font-boldfat text-[clamp(4.4rem,10.5vw,10rem)] font-normal leading-[0.82] tracking-[-0.045em] text-white"
+            className="absolute left-[0%] top-[17%] z-10 w-[58%] text-center font-boldfat text-[clamp(4.4rem,10.5vw,10rem)] font-normal leading-[0.82] tracking-[-0.045em] text-white"
             style={{ textShadow: "8px 9px 0 #5552B8, 13px 14px 0 rgba(64,59,164,.38)" }}
           >
             TRISHA
@@ -65,10 +65,10 @@ export function Cover() {
           </div>
 
           <div className="absolute left-[3%] top-[42%] z-20 w-[54%] max-w-[700px] text-center">
-            <motion.p initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="font-seasons text-[clamp(1.05rem,1.7vw,1.6rem)] italic leading-tight text-[#B9F0FF]">
+            <motion.p initial="hidden" animate="show" custom={0.24} variants={fadeUp} className="font-seasons text-[clamp(1.05rem,1.7vw,1.6rem)] text-[#B9F0FF]">
               Computer Science Engineering student at IGDTUW
             </motion.p>
-            <motion.p initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mx-auto mt-2 max-w-[780px] font-seasons text-[clamp(1rem,1.6vw,1.5rem)] leading-[1.25] text-[#B9F0FF]">
+            <motion.p initial="hidden" animate="show" custom={0.3} variants={fadeUp} className="mx-auto mt-2 max-w-[780px] font-seasons text-[clamp(1rem,1.6vw,1.5rem)] leading-[1.25] ">
               Passionate about AI, ML and building solutions that create real
               <br className="hidden sm:block" />
               impact.

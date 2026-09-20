@@ -32,7 +32,7 @@ export function ContactSection() {
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
       <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-[#B9B7FF]/15 dark:text-[#B9B7FF]/20 lg:block" />
 
-      <div className="container-editorial relative py-9 sm:py-12">
+      <div className="container-editorial relative py-6 sm:py-8">
         <div className="flex gap-6 sm:gap-10">
           {/* left rail — number, vertical line, marker */}
           <motion.div

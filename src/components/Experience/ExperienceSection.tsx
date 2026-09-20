@@ -30,7 +30,7 @@ export function ExperienceSection() {
       id="experience"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      <div className="container-editorial relative pt-7 sm:pt-9">
+      <div className="container-editorial relative pt-2 sm:pt-3">
         {/* Section header */}
         <motion.div
           initial="hidden"

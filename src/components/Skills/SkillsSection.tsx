@@ -41,7 +41,7 @@ export function SkillsSection() {
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             04
           </span>
-          <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-white dark:text-white">
+          <h2 className="mt-4 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
             Skills
           </h2>
           <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">

@@ -112,7 +112,7 @@ export function ExperienceSection() {
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               {project.label}
             </span>
-            <h3 className="mt-3 font-seasons text-[clamp(1.75rem,3vw,2.5rem)] leading-tight text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-[#B9B7FF] dark:text-white dark:group-hover:text-night-burgundy">
+            <h3 className="mt-3 font-seasons text-[clamp(1.75rem,3vw,2.5rem)] leading-tight text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-[#B9B7FF] dark:text-white dark:group-hover:text-[#B9B7FF]">
               {project.name}
             </h3>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">

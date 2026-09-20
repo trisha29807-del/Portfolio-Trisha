@@ -14,7 +14,7 @@ const fadeUp = {
 
 export function Cover() {
   return (
-    <section id="cover" className="relative h-[clamp(600px,calc(100svh-100px),700px)] overflow-hidden bg-[#050D32] text-white">
+    <section id="cover" className="relative h-[clamp(600px,calc(100svh-100px),700px)] overflow-hidden bg-transparent text-white">
       <div aria-hidden="true" className="pointer-events-none absolute -left-28 -top-28 h-72 w-72 rounded-full bg-[#31578B]/55 blur-[2px]" />
       <div aria-hidden="true" className="pointer-events-none absolute -right-20 -top-28 h-72 w-72 rounded-full bg-[#9CA6FF]/55 blur-[2px]" />
       <div aria-hidden="true" className="pointer-events-none absolute -left-20 bottom-[-7rem] h-80 w-80 rounded-full bg-[#193C72]/70 blur-[18px]" />

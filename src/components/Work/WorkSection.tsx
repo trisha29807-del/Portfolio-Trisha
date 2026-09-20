@@ -33,7 +33,7 @@ export function WorkSection() {
       id="work"
       className="bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      <div className="container-editorial pt-2 sm:pt-3">
+      <div className="container-editorial pt-8 sm:pt-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <motion.div
             initial="hidden"
@@ -44,10 +44,10 @@ export function WorkSection() {
             <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               02
             </span>
-            <h2 className="mt-4 font-mager text-[clamp(2.5rem,6vw,4.5rem)] tracking-[0.04em] text-white dark:text-white">
+            <h2 className="mt-5 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#B9B7FF] dark:text-[#B9B7FF]">
               Selected Works
             </h2>
-            <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-white dark:text-white">
+            <h2 className="mt-4 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
               A collection of ideas,{" "}
               <em className="font-seasons italic text-[#B9B7FF] dark:text-[#B9B7FF]">
                 products and experiments
@@ -77,7 +77,7 @@ export function WorkSection() {
           custom={0.25}
           viewport={{ once: true, margin: "-15% 0px" }}
           variants={fadeUp}
-          className="mt-6 flex items-center gap-3 sm:mt-4"
+          className="mt-8 flex items-center gap-3 sm:mt-6"
         >
           <div className="h-px flex-1 bg-day-border dark:bg-night-border" />
           <span className="h-1.5 w-1.5 rotate-45 bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />

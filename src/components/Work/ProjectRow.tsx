@@ -55,7 +55,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
       {/* decorative oversized number, faded into the background, sitting on the row's outer margin */}
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute -top-10 select-none font-seasons text-[7rem] leading-none text-white/[0.06] transition-opacity duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-white/[0.04] sm:text-[9rem] dark:text-white/[0.07] dark:group-hover:text-night-ink/[0.05] ${
+        className={`pointer-events-none absolute -top-10 select-none font-seasons text-[7rem] leading-none text-white/[0.06] transition-opacity duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-white/[0.04] sm:text-[9rem] dark:text-white/[0.07] dark:group-hover:text-white/[0.05] ${
           isImageLeft ? "right-0 lg:-right-2" : "left-0 lg:-left-2"
         }`}
       >
@@ -131,7 +131,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
           <a
             href={project.githubUrl}
             {...(project.githubLabel ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-white dark:hover:bg-night-ink dark:hover:text-night-bg"
+            className="inline-flex items-center gap-2 border border-white/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-white hover:text-day-bg dark:border-white/60 dark:text-white dark:hover:bg-white dark:hover:text-night-bg"
           >
             {githubLabel}
             <Github size={14} strokeWidth={1.75} />
@@ -142,7 +142,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-white dark:hover:bg-night-ink dark:hover:text-night-bg"
+            className="inline-flex items-center gap-2 border border-white/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-white hover:text-day-bg dark:border-white/60 dark:text-white dark:hover:bg-white dark:hover:text-night-bg"
           >
             Live Demo
             <ExternalLink size={14} strokeWidth={1.75} />
@@ -156,7 +156,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
             type="button"
             onClick={() => setExpanded((e) => !e)}
             aria-expanded={expanded}
-            className="inline-flex items-center gap-1.5 text-[12px] font-medium tracking-[0.08em] uppercase text-[#AEBEDE] transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:text-[#B9B7FF] dark:text-[#AEBEDE] dark:hover:text-night-burgundy"
+            className="inline-flex items-center gap-1.5 text-[12px] font-medium tracking-[0.08em] uppercase text-[#AEBEDE] transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:text-[#B9B7FF] dark:text-[#AEBEDE] dark:hover:text-[#B9B7FF]"
           >
             {expanded ? "Hide Full Breakdown" : "Explore Full Breakdown"}
             <ChevronDown
@@ -174,7 +174,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
     <div
       ref={rowRef}
       id={project.slug}
-      className="group scroll-mt-24 border-t border-[#294777] py-16 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-day-burgundy/25 dark:border-[#294777] dark:hover:border-night-burgundy/25 sm:py-20"
+      className="group scroll-mt-24 border-t border-[#294777] py-16 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-[\#B9B7FF]/25 dark:border-[#294777] dark:hover:border-[\#B9B7FF]/25 sm:py-20"
     >
       <div className="container-editorial">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">

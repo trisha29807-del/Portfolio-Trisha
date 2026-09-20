@@ -26,7 +26,7 @@ export function AchievementsSection() {
       id="achievements"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      <div className="container-editorial relative pt-7 sm:pt-9">
+      <div className="container-editorial relative pt-2 sm:pt-3">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -63,7 +63,7 @@ export function AchievementsSection() {
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
                 className={`group relative pl-10 ${
-                  i > 0 ? "mt-8 border-t border-[#294777] pt-14 dark:border-[#294777] sm:mt-10 sm:pt-10" : ""
+                  i > 0 ? "mt-5 border-t border-[#294777] pt-6 dark:border-[#294777] sm:mt-6 sm:pt-7" : ""
                 }`}
               >
                 <span

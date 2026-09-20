@@ -71,19 +71,19 @@ export function EducationSection() {
           </p>
         </motion.div>
 
-        <div className="mt-3 sm:mt-4">
+        <div className="mt-5 sm:mt-6>
           <AnimatedDivider />
         </div>
 
         {/* Main composition — degree left, university right */}
-        <div className="grid grid-cols-1 gap-7 py-5 sm:py-6 lg:grid-cols-[1fr_1fr] lg:gap-12">
+        <div className="grid grid-cols-1 gap-12 py-6 sm:py-8 lg:grid-cols-2 lg:gap-20">
           <motion.div
             initial="hidden"
             whileInView="show"
             custom={0.1}
             viewport={{ once: true, margin: "-10% 0px" }}
             variants={fadeUp}
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <div>
               <h3 className="font-seasons text-[clamp(1.5rem,2.6vw,2rem)] leading-tight text-white dark:text-white">
@@ -92,7 +92,7 @@ export function EducationSection() {
               <p className="mt-1 font-seasons text-[clamp(1.15rem,2vw,1.5rem)] italic text-[#B9B7FF] dark:text-[#B9B7FF]">
                 Computer Science Engineering
               </p>
-              <p className="mt-2 text-[13px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
+              <p className="mt-3 text-[13px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
                 2025 — 2029
               </p>
             </div>
@@ -133,7 +133,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Academic Foundation */}
-        <div className="py-4 sm:py-5">
+        <div className="py-6 sm:py-8">
           <motion.span
             initial="hidden"
             whileInView="show"
@@ -144,7 +144,7 @@ export function EducationSection() {
             Academic Foundation
           </motion.span>
 
-          <div className="mt-5 grid grid-cols-1 gap-x-10 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-x-12 sm:grid-cols-2">
             {subjects.map((subject, i) => (
               <motion.div
                 key={subject}
@@ -153,7 +153,7 @@ export function EducationSection() {
                 custom={0.04 * i}
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
-                className="group relative border-b border-[#294777] py-2.5 dark:border-[#294777] sm:py-3"
+                className="group relative border-b border-[#294777] py-4 dark:border-[#294777] sm:py-5"
               >
                 <span className="relative text-[15px] text-white dark:text-white">
                   {subject}
@@ -178,7 +178,7 @@ export function EducationSection() {
             Academic Highlights
           </motion.span>
 
-          <div className="mt-5 grid grid-cols-1 gap-7 sm:grid-cols-2 sm:gap-10">
+          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16>
             {highlights.map((h, i) => (
               <motion.div
                 key={h.label}
@@ -213,7 +213,7 @@ export function EducationSection() {
             Currently Exploring
           </motion.span>
 
-          <div className="mt-5 flex flex-wrap gap-2.5">
+          <div className="mt-8 flex flex-wrap gap-3">
             {exploring.map((tag, i) => (
               <motion.span
                 key={tag}
@@ -238,9 +238,9 @@ export function EducationSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-4 pt-1 text-center sm:pb-5"
+        className="container-editorial relative pb-6 pt-2 text-center sm:pb-5"
       >
-        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.1rem,2vw,1.45rem)] italic leading-relaxed text-white dark:text-white">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Learning in the classroom.
           <br />
           Building beyond it.

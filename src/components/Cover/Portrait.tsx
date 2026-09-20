@@ -5,12 +5,26 @@ export function Portrait() {
   return (
     <div className="relative aspect-square w-full">
       <motion.div
-        initial={{ opacity: 0, scale: 0.96 }}
+        initial={{ opacity: 0, scale: 0.94 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.65, 0, 0.35, 1] }}
-        className="relative h-full w-full overflow-hidden rounded-full border-[3px] border-[#D7D4FF] bg-[#0A1640] p-0.5 shadow-[0_0_45px_rgba(133,145,255,0.24)]"
+        className="relative h-full w-full"
       >
-        <img src={portrait} alt="Portrait of Trisha" className="h-full w-full rounded-full object-cover object-center" />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -inset-3 rounded-full border border-white/70"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -inset-1.5 rounded-full border-[2px] border-[#D7D4FF] shadow-[0_0_28px_rgba(215,212,255,0.25)]"
+          animate={{ scale: [1, 1.025, 1], opacity: [0.85, 1, 0.85] }}
+          transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <div className="relative h-full w-full overflow-hidden rounded-full border-[3px] border-[#D7D4FF] bg-[#0A1640] p-0.5 shadow-[0_0_45px_rgba(133,145,255,0.24)]">
+          <img src={portrait} alt="Portrait of Trisha" className="h-full w-full rounded-full object-cover object-center" />
+        </div>
       </motion.div>
     </div>
   );

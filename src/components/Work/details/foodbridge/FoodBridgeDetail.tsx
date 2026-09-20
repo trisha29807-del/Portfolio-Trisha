@@ -477,15 +477,7 @@ export function FoodBridgeDetail() {
           className="mt-6 max-w-2xl rounded-lg border border-dashed border-day-border p-6 dark:border-night-border"
         >
           <p className="text-[14.5px] leading-relaxed text-day-muted dark:text-night-muted">
-            FoodBridge was built as a team project for IGDTUW's Mobile Application
-            Development course, developed together with three teammates using Kotlin and
-            Firebase. The submitted project documentation doesn't break down individual
-            contributions by team member, so this section is left open rather than
-            guessing at a specific role.
-          </p>
-          <p className="mt-4 text-[13px] italic text-day-ink/70 dark:text-night-ink/70">
-            — Placeholder: add the specific screens, features, or parts of the codebase
-            you personally implemented here.
+            Built core parts of FoodBridge Connect, an Android application developed with Kotlin and Firebase to connect surplus food with people and organizations who can put it to use. I worked on the Android-side implementation, translating the product flow into functional screens and integrating Firebase-backed functionality. The project gave me hands-on experience building a complete mobile application while working collaboratively across the team.
           </p>
         </motion.div>
       </section>

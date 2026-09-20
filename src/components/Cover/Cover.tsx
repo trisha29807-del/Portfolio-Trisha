@@ -29,7 +29,7 @@ export function Cover() {
             animate="show"
             custom={0.05}
             variants={fadeUp}
-            className="absolute left-[3%] top-[4.5%] z-10 flex w-[58%] flex-col items-center"
+            className="absolute left-[3%] top-[3.5%] z-10 flex w-auto flex-col items-start"
           >
             <span className="font-mager text-[clamp(.7rem,1vw,.95rem)] tracking-[0.22em] text-[#B9F0FF]">
               PORTFOLIO
@@ -42,7 +42,7 @@ export function Cover() {
             animate="show"
             custom={0.1}
             variants={fadeUp}
-            className="absolute left-[3%] top-[8%] z-10 w-[58%] text-center font-boldfat text-[clamp(4.4rem,10.5vw,10rem)] font-normal leading-[0.82] tracking-[-0.045em] text-white"
+            className="absolute left-[3%] top-[13%] z-10 w-[58%] text-center font-boldfat text-[clamp(4.4rem,10.5vw,10rem)] font-normal leading-[0.82] tracking-[-0.045em] text-white"
             style={{ textShadow: "8px 9px 0 #5552B8, 13px 14px 0 rgba(64,59,164,.38)" }}
           >
             TRISHA

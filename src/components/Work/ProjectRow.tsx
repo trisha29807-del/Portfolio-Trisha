@@ -38,7 +38,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
       style={{ y: parallaxY }}
       className="relative aspect-[16/10] w-full overflow-hidden rounded-sm shadow-[0_30px_60px_-30px_rgba(20,10,8,0.35)] dark:shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]"
     >
-      <div className="h-full w-full transition-transform duration-700 ease-editorial group-hover:scale-[1.02]">
+      <div className="h-full w-full transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:scale-[1.02]">
         {mockup}
       </div>
     </motion.div>
@@ -55,40 +55,40 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
       {/* decorative oversized number, faded into the background, sitting on the row's outer margin */}
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute -top-10 select-none font-serif text-[7rem] leading-none text-day-ink/[0.06] transition-opacity duration-500 ease-editorial group-hover:text-day-ink/[0.04] sm:text-[9rem] dark:text-night-ink/[0.07] dark:group-hover:text-night-ink/[0.05] ${
+        className={`pointer-events-none absolute -top-10 select-none font-seasons text-[7rem] leading-none text-white/[0.06] transition-opacity duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-white/[0.04] sm:text-[9rem] dark:text-white/[0.07] dark:group-hover:text-night-ink/[0.05] ${
           isImageLeft ? "right-0 lg:-right-2" : "left-0 lg:-left-2"
         }`}
       >
         {project.number}
       </span>
 
-      <div className="flex items-center gap-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-day-burgundy dark:text-night-burgundy">
+      <div className="flex items-center gap-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
         <span>Project {project.number}</span>
         <span className="h-1 w-1 rotate-45 bg-current opacity-60" />
-        <span className="text-day-muted dark:text-night-muted">
+        <span className="text-[#AEBEDE] dark:text-[#AEBEDE]">
           {project.category}
         </span>
       </div>
 
-      <h3 className="mt-3 font-serif text-[clamp(1.75rem,3.2vw,2.75rem)] leading-tight text-day-ink transition-transform duration-500 ease-editorial group-hover:translate-x-1 dark:text-night-ink">
+      <h3 className="mt-3 font-boldfat text-[clamp(1.75rem,3.2vw,2.75rem)] leading-tight text-white transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:translate-x-1 dark:text-white">
         {project.title}
       </h3>
 
-      <p className="mt-4 max-w-md text-[15px] leading-relaxed text-day-muted dark:text-night-muted">
+      <p className="mt-4 max-w-md text-[15px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
         {project.description}
       </p>
 
       {project.metrics && project.metrics.length > 0 && (
-        <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-day-ink/80 dark:text-night-ink/80">
+        <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] text-white/80 dark:text-white/80">
           {project.metrics.map((m, i) => (
             <span key={m.label} className="flex items-center gap-2">
               {i > 0 && (
-                <span className="h-1 w-1 rotate-45 bg-day-burgundy/50 dark:bg-night-burgundy/50" />
+                <span className="h-1 w-1 rotate-45 bg-[#7FDFFF]/50 dark:bg-[#7FDFFF]/50" />
               )}
-              <span className="font-semibold text-day-burgundy dark:text-night-burgundy">
+              <span className="font-semibold text-[#B9B7FF] dark:text-[#B9B7FF]">
                 {m.value}
               </span>
-              <span className="text-day-muted dark:text-night-muted">
+              <span className="text-[#AEBEDE] dark:text-[#AEBEDE]">
                 {m.label}
               </span>
             </span>
@@ -108,20 +108,20 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
             type="button"
             onClick={() => setExpanded((e) => !e)}
             aria-expanded={expanded}
-            className="inline-flex items-center gap-2 bg-day-burgundy px-6 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-bg transition-all duration-300 ease-editorial hover:-translate-y-px hover:shadow-[0_10px_24px_-8px_rgba(122,22,38,0.45)] dark:bg-night-burgundy dark:text-night-bg dark:hover:shadow-[0_10px_24px_-8px_rgba(199,73,92,0.35)]"
+            className="inline-flex items-center gap-2 bg-[#7FDFFF] px-6 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-bg transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:shadow-[0_10px_24px_-8px_rgba(122,22,38,0.45)] dark:bg-[#7FDFFF] dark:text-night-bg dark:hover:shadow-[0_10px_24px_-8px_rgba(199,73,92,0.35)]"
           >
             {primaryLabel}
             <ArrowRight
               size={14}
               strokeWidth={1.75}
-              className={`transition-transform duration-300 ease-editorial ${expanded ? "rotate-90" : ""}`}
+              className={`transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] ${expanded ? "rotate-90" : ""}`}
             />
           </button>
         ) : (
           <a
             href={primaryHref}
             {...(primaryExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="inline-flex items-center gap-2 bg-day-burgundy px-6 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-bg transition-all duration-300 ease-editorial hover:-translate-y-px hover:shadow-[0_10px_24px_-8px_rgba(122,22,38,0.45)] dark:bg-night-burgundy dark:text-night-bg dark:hover:shadow-[0_10px_24px_-8px_rgba(199,73,92,0.35)]"
+            className="inline-flex items-center gap-2 bg-[#7FDFFF] px-6 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-bg transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:shadow-[0_10px_24px_-8px_rgba(122,22,38,0.45)] dark:bg-[#7FDFFF] dark:text-night-bg dark:hover:shadow-[0_10px_24px_-8px_rgba(199,73,92,0.35)]"
           >
             {primaryLabel}
             <ArrowRight size={14} strokeWidth={1.75} />
@@ -131,7 +131,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
           <a
             href={project.githubUrl}
             {...(project.githubLabel ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-ink transition-all duration-300 ease-editorial hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-night-ink dark:hover:bg-night-ink dark:hover:text-night-bg"
+            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-white dark:hover:bg-night-ink dark:hover:text-night-bg"
           >
             {githubLabel}
             <Github size={14} strokeWidth={1.75} />
@@ -142,7 +142,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
             href={project.liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-ink transition-all duration-300 ease-editorial hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-night-ink dark:hover:bg-night-ink dark:hover:text-night-bg"
+            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-white dark:hover:bg-night-ink dark:hover:text-night-bg"
           >
             Live Demo
             <ExternalLink size={14} strokeWidth={1.75} />
@@ -156,13 +156,13 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
             type="button"
             onClick={() => setExpanded((e) => !e)}
             aria-expanded={expanded}
-            className="inline-flex items-center gap-1.5 text-[12px] font-medium tracking-[0.08em] uppercase text-day-muted transition-colors duration-300 ease-editorial hover:text-day-burgundy dark:text-night-muted dark:hover:text-night-burgundy"
+            className="inline-flex items-center gap-1.5 text-[12px] font-medium tracking-[0.08em] uppercase text-[#AEBEDE] transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:text-[#B9B7FF] dark:text-[#AEBEDE] dark:hover:text-night-burgundy"
           >
             {expanded ? "Hide Full Breakdown" : "Explore Full Breakdown"}
             <ChevronDown
               size={14}
               strokeWidth={1.75}
-              className={`transition-transform duration-300 ease-editorial ${expanded ? "rotate-180" : ""}`}
+              className={`transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] ${expanded ? "rotate-180" : ""}`}
             />
           </button>
         </div>
@@ -174,7 +174,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
     <div
       ref={rowRef}
       id={project.slug}
-      className="group scroll-mt-24 border-t border-day-border py-16 transition-colors duration-500 ease-editorial first:border-t-0 hover:border-day-burgundy/25 dark:border-night-border dark:hover:border-night-burgundy/25 sm:py-20"
+      className="group scroll-mt-24 border-t border-[#294777] py-16 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-day-burgundy/25 dark:border-[#294777] dark:hover:border-night-burgundy/25 sm:py-20"
     >
       <div className="container-editorial">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -196,7 +196,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
                 transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
                 className="overflow-hidden"
               >
-                <div className="mt-12 border-t border-day-border pt-12 dark:border-night-border">
+                <div className="mt-12 border-t border-[#294777] pt-12 dark:border-[#294777]">
                   {detail}
                 </div>
               </motion.div>

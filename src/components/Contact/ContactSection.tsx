@@ -47,7 +47,7 @@ export function ContactSection() {
               custom={0.05}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="inline-block text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
+              className="inline-block font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#B9B7FF] dark:text-[#B9B7FF]"
             >
               Contact
             </motion.span>

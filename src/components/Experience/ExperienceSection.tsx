@@ -28,7 +28,7 @@ export function ExperienceSection() {
     <section
       ref={sectionRef}
       id="experience"
-      className="relative overflow-hidden bg-day-bg text-day-ink transition-colors duration-700 ease-editorial dark:bg-night-bg dark:text-night-ink"
+      className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
       {/* oversized background numeral, centered/integrated like Education & Skills */}
       <motion.div
@@ -36,7 +36,7 @@ export function ExperienceSection() {
         style={{ y: bgY }}
         className="pointer-events-none absolute inset-x-0 top-[10%] flex justify-end pr-4 sm:pr-12"
       >
-        <span className="select-none font-serif text-[22rem] leading-none text-day-ink/[0.035] dark:text-night-ink/[0.035] sm:text-[28rem]">
+        <span className="select-none font-seasons text-[22rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[28rem]">
           05
         </span>
       </motion.div>
@@ -49,13 +49,13 @@ export function ExperienceSection() {
           viewport={{ once: true, margin: "-15% 0px" }}
           variants={fadeUp}
         >
-          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
+          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             05
           </span>
-          <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-day-ink dark:text-night-ink">
+          <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-white dark:text-white">
             Experience
           </h2>
-          <p className="mt-5 max-w-[38ch] font-serif text-[19px] italic leading-relaxed text-day-muted dark:text-night-muted">
+          <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
             Where learning became practice.
           </p>
         </motion.div>
@@ -75,27 +75,27 @@ export function ExperienceSection() {
             variants={fadeUp}
             className="relative pl-6"
           >
-            <span className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-day-burgundy dark:bg-night-burgundy" />
-            <span className="absolute left-[3px] top-4 bottom-0 w-px bg-day-burgundy/25 dark:bg-night-burgundy/25" />
+            <span className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7FDFFF] dark:bg-[#7FDFFF]" />
+            <span className="absolute left-[3px] top-4 bottom-0 w-px bg-[#7FDFFF]/25 dark:bg-[#7FDFFF]/25" />
 
-            <span className="text-[13px] font-semibold tracking-[0.06em] text-day-burgundy dark:text-night-burgundy">
+            <span className="text-[13px] font-semibold tracking-[0.06em] text-[#B9B7FF] dark:text-[#B9B7FF]">
               {experience.dateRange}
             </span>
 
-            <h3 className="mt-3 font-serif text-[1.5rem] leading-tight text-day-ink dark:text-night-ink">
+            <h3 className="mt-3 font-seasons text-[1.5rem] leading-tight text-white dark:text-white">
               {experience.role}
             </h3>
 
             <div className="mt-4 h-px w-8 bg-day-border dark:bg-night-border" />
 
-            <p className="mt-4 text-[15px] text-day-ink dark:text-night-ink">
+            <p className="mt-4 text-[15px] text-white dark:text-white">
               {experience.org}
             </p>
-            <p className="mt-1 font-serif text-[14px] italic text-day-muted dark:text-night-muted">
+            <p className="mt-1 font-seasons text-[14px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
               {experience.collaboration}
             </p>
 
-            <p className="mt-6 text-[13px] italic text-day-muted dark:text-night-muted">
+            <p className="mt-6 text-[13px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
               {experience.format}
             </p>
           </motion.div>
@@ -109,13 +109,13 @@ export function ExperienceSection() {
             variants={fadeUp}
             className="group"
           >
-            <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-day-burgundy dark:text-night-burgundy">
+            <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               {project.label}
             </span>
-            <h3 className="mt-3 font-serif text-[clamp(1.75rem,3vw,2.5rem)] leading-tight text-day-ink transition-colors duration-300 ease-editorial group-hover:text-day-burgundy dark:text-night-ink dark:group-hover:text-night-burgundy">
+            <h3 className="mt-3 font-seasons text-[clamp(1.75rem,3vw,2.5rem)] leading-tight text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-[#B9B7FF] dark:text-white dark:group-hover:text-night-burgundy">
               {project.name}
             </h3>
-            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-day-muted dark:text-night-muted">
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
               {project.description}
             </p>
 
@@ -125,12 +125,12 @@ export function ExperienceSection() {
               {project.bullets.map((b) => (
                 <li
                   key={b.bold}
-                  className="flex gap-3 text-[14.5px] leading-relaxed text-day-ink/85 dark:text-night-ink/85"
+                  className="flex gap-3 text-[14.5px] leading-relaxed text-white/85 dark:text-white/85"
                 >
-                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-day-burgundy/70 dark:bg-night-burgundy/70" />
+                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />
                   <span>
                     {b.lead}{" "}
-                    <strong className="font-semibold text-day-ink dark:text-night-ink">
+                    <strong className="font-semibold text-white dark:text-white">
                       {b.bold}
                     </strong>{" "}
                     {b.rest}
@@ -159,25 +159,25 @@ export function ExperienceSection() {
                 <div
                   key={item.number}
                   className={`group/meta py-5 ${
-                    i > 0 ? "border-t border-day-border dark:border-night-border" : "pt-0"
+                    i > 0 ? "border-t border-[#294777] dark:border-[#294777]" : "pt-0"
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className="font-serif text-[1.75rem] leading-none text-day-burgundy dark:text-night-burgundy">
+                    <span className="font-seasons text-[1.75rem] leading-none text-[#B9B7FF] dark:text-[#B9B7FF]">
                       {item.number}
                     </span>
                     <div className="flex flex-1 items-start justify-between gap-2 pt-1">
-                      <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-day-ink transition-[letter-spacing] duration-300 ease-editorial group-hover/meta:tracking-[0.18em] dark:text-night-ink">
+                      <span className="text-[12px] font-semibold tracking-[0.14em] uppercase text-white transition-[letter-spacing] duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover/meta:tracking-[0.18em] dark:text-white">
                         {item.label}
                       </span>
                       <Icon
                         size={15}
                         strokeWidth={1.5}
-                        className="mt-0.5 shrink-0 text-day-ink/30 dark:text-night-ink/30"
+                        className="mt-0.5 shrink-0 text-white/30 dark:text-white/30"
                       />
                     </div>
                   </div>
-                  <div className="mt-2 pl-[2.6rem] text-[12.5px] leading-relaxed text-day-muted dark:text-night-muted">
+                  <div className="mt-2 pl-[2.6rem] text-[12.5px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
                     {item.lines.map((line) => (
                       <div key={line}>{line}</div>
                     ))}
@@ -198,7 +198,7 @@ export function ExperienceSection() {
         variants={fadeUp}
         className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
       >
-        <p className="mx-auto max-w-xl font-serif text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-day-ink dark:text-night-ink">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Real-world problems. Real impact.
           <br />
           That&rsquo;s where growth happens.

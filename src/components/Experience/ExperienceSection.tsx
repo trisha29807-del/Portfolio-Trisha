@@ -41,7 +41,7 @@ export function ExperienceSection() {
         </span>
       </motion.div>
 
-      <div className="container-editorial relative pt-20 sm:pt-28">
+      <div className="container-editorial relative pt-12 sm:pt-16">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -60,12 +60,12 @@ export function ExperienceSection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 sm:mt-16">
+        <div className="mt-7 sm:mt-9">
           <AnimatedDivider />
         </div>
 
         {/* Three-column editorial composition */}
-        <div className="grid grid-cols-1 gap-14 py-16 sm:py-20 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
+        <div className="grid grid-cols-1 gap-14 py-9 sm:py-12 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
           {/* LEFT — date / role / org, with a timeline marker */}
           <motion.div
             initial="hidden"

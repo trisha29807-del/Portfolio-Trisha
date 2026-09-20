@@ -174,7 +174,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
     <div
       ref={rowRef}
       id={project.slug}
-      className="group scroll-mt-24 border-t border-[#294777] py-16 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-[\#B9B7FF]/25 dark:border-[#294777] dark:hover:border-[\#B9B7FF]/25 sm:py-20"
+      className="group scroll-mt-24 border-t border-[#294777] py-10 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-[\#B9B7FF]/25 dark:border-[#294777] dark:hover:border-[\#B9B7FF]/25 sm:py-12"
     >
       <div className="container-editorial">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -196,7 +196,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
                 transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
                 className="overflow-hidden"
               >
-                <div className="mt-12 border-t border-[#294777] pt-12 dark:border-[#294777]">
+                <div className="mt-8 border-t border-[#294777] pt-8 dark:border-[#294777]">
                   {detail}
                 </div>
               </motion.div>

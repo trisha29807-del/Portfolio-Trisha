@@ -45,12 +45,12 @@ export function AchievementsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-5 sm:mt-6">
+        <div className="mt-3 sm:mt-4">
           <AnimatedDivider />
         </div>
 
         {/* Numbered editorial timeline */}
-        <div className="relative py-6 sm:py-8">
+        <div className="relative py-4 sm:py-5">
           <div className="absolute left-[3px] top-3 bottom-3 w-px bg-[#7FDFFF]/15 dark:bg-[#7FDFFF]/15" />
 
           <div className="flex flex-col">
@@ -63,7 +63,7 @@ export function AchievementsSection() {
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
                 className={`group relative pl-10 ${
-                  i > 0 ? "mt-5 border-t border-[#294777] pt-6 dark:border-[#294777] sm:mt-6 sm:pt-7" : ""
+                  i > 0 ? "mt-4 border-t border-[#294777] pt-4 dark:border-[#294777] sm:mt-5 sm:pt-5" : ""
                 }`}
               >
                 <span
@@ -73,8 +73,8 @@ export function AchievementsSection() {
                 />
 
                 <div
-                  className={`flex flex-col gap-6 transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:translate-x-1 sm:flex-row sm:items-start sm:justify-between ${
-                    m.featured ? "sm:gap-12" : "sm:gap-10"
+                  className={`flex flex-col gap-4 transition-transform duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:translate-x-1 sm:flex-row sm:items-start sm:justify-between ${
+                    m.featured ? "sm:gap-8" : "sm:gap-7"
                   }`}
                 >
                   <div className={m.featured ? "border-l-2 border-[\#B9B7FF]/30 pl-6 dark:border-[\#B9B7FF]/30" : ""}>

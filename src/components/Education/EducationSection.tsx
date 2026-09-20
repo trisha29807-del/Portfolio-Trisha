@@ -61,7 +61,7 @@ export function EducationSection() {
         03
       </motion.span>
 
-      <div className="container-editorial relative pt-12 sm:pt-16">
+      <div className="container-editorial relative pt-7 sm:pt-9">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -80,12 +80,12 @@ export function EducationSection() {
           </p>
         </motion.div>
 
-        <div className="mt-7 sm:mt-9">
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
         {/* Main composition — degree left, university right */}
-        <div className="grid grid-cols-1 gap-12 py-9 sm:py-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 gap-12 py-6 sm:py-8 lg:grid-cols-2 lg:gap-20">
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -142,7 +142,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Academic Foundation */}
-        <div className="py-9 sm:py-12">
+        <div className="py-6 sm:py-8">
           <motion.span
             initial="hidden"
             whileInView="show"
@@ -176,7 +176,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Academic Highlights */}
-        <div className="py-9 sm:py-12">
+        <div className="py-6 sm:py-8">
           <motion.span
             initial="hidden"
             whileInView="show"
@@ -211,7 +211,7 @@ export function EducationSection() {
         <AnimatedDivider />
 
         {/* Currently Exploring */}
-        <div className="py-9 sm:py-12">
+        <div className="py-6 sm:py-8">
           <motion.span
             initial="hidden"
             whileInView="show"
@@ -247,7 +247,7 @@ export function EducationSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
+        className="container-editorial relative pb-6 pt-2 text-center sm:pb-8"
       >
         <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Learning in the classroom.

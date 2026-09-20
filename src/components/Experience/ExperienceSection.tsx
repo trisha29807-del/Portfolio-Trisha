@@ -37,7 +37,7 @@ export function ExperienceSection() {
         className="pointer-events-none absolute inset-x-0 top-[10%] flex justify-end pr-4 sm:pr-12"
       >
         <span className="select-none font-serif text-[22rem] leading-none text-day-ink/[0.035] dark:text-night-ink/[0.035] sm:text-[28rem]">
-          04
+          05
         </span>
       </motion.div>
 
@@ -50,7 +50,7 @@ export function ExperienceSection() {
           variants={fadeUp}
         >
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
-            04
+            05
           </span>
           <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-day-ink dark:text-night-ink">
             Experience

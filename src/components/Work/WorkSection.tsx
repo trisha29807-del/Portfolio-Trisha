@@ -96,7 +96,7 @@ export function WorkSection() {
         })}
       </div>
 
-      <div className="container-editorial pb-12 sm:pb-16">
+      <div className="container-editorial pb-2 sm:pb-3">
         <div className="flex items-center gap-3 pt-4">
           <div className="h-px flex-1 bg-day-border dark:bg-night-border" />
           <span className="h-1.5 w-1.5 rotate-45 bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />

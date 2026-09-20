@@ -25,15 +25,18 @@ export function AboutSection() {
       <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-0 sm:px-10 sm:pt-10 sm:pb-0 lg:px-16">
         <div className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr]">
           <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-15% 0px" }} variants={fadeUp}>
-            <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF]">
-              01
-            </span>
-            <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-white">
-              About Me
+            <div className="flex items-center gap-4 text-[#B9F0FF]">
+              <span className="font-seasons text-sm">01</span>
+              <span className="h-px w-14 bg-[#7C8EDB]" />
+              <span className="font-mager text-[clamp(2.5rem,6vw,4.5rem)] tracking-[0.04em] text-white">
+                ABOUT ME
+              </span>
+            </div>
+
+            <h2 className="mt-5 max-w-5xl font-boldfat text-[clamp(3.3rem,7vw,6.6rem)] leading-[0.82] tracking-[-0.04em] text-white">
+              I BUILD
+              <span className="block text-[#B9B7FF]">WITH PURPOSE.</span>
             </h2>
-            <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE]">
-              I build with purpose.
-            </p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="show" custom={0.12} viewport={{ once: true, margin: "-15% 0px" }} variants={fadeUp} className="lg:pb-3">

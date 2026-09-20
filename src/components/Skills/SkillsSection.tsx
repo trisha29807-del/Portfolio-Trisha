@@ -57,7 +57,7 @@ export function SkillsSection() {
             items-start lets each panel keep its own natural height, so
             AI & ML (more tags) and the CS list panel read taller than
             their neighbours instead of being stretched to match. */}
-        <div className="grid grid-cols-1 items-start gap-4 py-5 sm:grid-cols-2 sm:py-6 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-5 py-9 sm:grid-cols-2 sm:py-12 lg:grid-cols-3">
           {skillCategories.map((category, i) => (
             <SkillPanel
               key={category.number}
@@ -76,9 +76,9 @@ export function SkillsSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-4 pt-1 text-center sm:pb-5"
+        className="container-editorial relative pb-6 pt-2 text-center sm:pb-5"
       >
-        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.1rem,2vw,1.45rem)] italic leading-relaxed text-white dark:text-white">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Tools matter.
           <br />
           What you build with them matters more.

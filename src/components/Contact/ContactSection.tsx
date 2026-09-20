@@ -32,7 +32,7 @@ export function ContactSection() {
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
       <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-[#B9B7FF]/15 dark:text-[#B9B7FF]/20 lg:block" />
 
-      <div className="container-editorial relative py-16 sm:py-20">
+      <div className="container-editorial relative py-9 sm:py-12">
         <div className="flex gap-6 sm:gap-10">
           {/* left rail — number, vertical line, marker */}
           <motion.div
@@ -114,7 +114,7 @@ export function ContactSection() {
               custom={0.34}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-10 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[#294777] pt-8 dark:border-[#294777] sm:mt-12 sm:grid-cols-4 sm:gap-x-5 sm:pt-7"
+              className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[#294777] pt-8 dark:border-[#294777] sm:mt-12 sm:grid-cols-4 sm:gap-x-5 sm:pt-7"
             >
               <ContactRoute
                 icon={Mail}

@@ -41,7 +41,7 @@ export function SkillsSection() {
         </span>
       </motion.div>
 
-      <div className="container-editorial relative pt-12 sm:pt-16">
+      <div className="container-editorial relative pt-7 sm:pt-9">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -60,7 +60,7 @@ export function SkillsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-7 sm:mt-9">
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
@@ -87,7 +87,7 @@ export function SkillsSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-24 pt-4 text-center sm:pb-32"
+        className="container-editorial relative pb-6 pt-2 text-center sm:pb-8"
       >
         <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Tools matter.

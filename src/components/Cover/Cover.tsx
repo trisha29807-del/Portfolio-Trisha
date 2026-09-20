@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { VerticalTag } from "./VerticalTag";
-import { Portrait } from "./Portrait";
 import { QuickInfo } from "./QuickInfo";
-import { CompassStar } from "./CompassStar";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -19,137 +16,117 @@ export function Cover() {
   return (
     <section
       id="cover"
-      className="relative flex min-h-screen flex-col justify-between bg-day-bg text-day-ink dark:bg-night-bg dark:text-night-ink transition-colors duration-700 ease-editorial"
+      className="relative min-h-[calc(100vh-76px)] overflow-hidden bg-day-bg text-day-ink dark:bg-night-bg dark:text-night-ink"
     >
-      <div className="container-editorial flex flex-1 flex-col pt-8 sm:pt-10 lg:pt-12">
-        {/* Editorial masthead detail */}
-        <motion.header
-          initial="hidden"
-          animate="show"
-          variants={fadeUp}
-          className="flex flex-col gap-1 border-b border-day-border pb-6 dark:border-night-border sm:pb-8"
-        >
-          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
-            Issue 01
-          </span>
-          <span className="text-[11px] tracking-[0.14em] uppercase text-day-muted dark:text-night-muted">
-            Editorial Portfolio · 2026 Edition
-          </span>
-        </motion.header>
+      <div aria-hidden="true" className="pointer-events-none absolute -left-28 top-24 h-72 w-72 rounded-full bg-[#253B91]/35 blur-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute right-[-8rem] top-[-7rem] h-[28rem] w-[28rem] rounded-full bg-[#6370FF]/20 blur-2xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute bottom-[-12rem] left-[42%] h-[30rem] w-[30rem] rounded-full bg-[#355FFF]/10 blur-3xl" />
 
-        {/* Main content grid */}
-        <div className="grid flex-1 grid-cols-1 gap-10 py-10 sm:py-14 lg:grid-cols-[1fr_auto_minmax(360px,460px)] lg:gap-8 lg:py-16">
-          {/* Left column — name, tagline, actions, quick info */}
-          <div className="flex flex-col justify-between gap-12 lg:gap-10">
-            <div>
-              <motion.h1
-                initial="hidden"
-                animate="show"
-                custom={0.15}
-                variants={fadeUp}
-                className="font-serif leading-[0.85] text-day-burgundy dark:text-night-burgundy text-[clamp(3.5rem,13vw,7.5rem)]"
-              >
-                TRISHA
-              </motion.h1>
+      <div className="container-editorial relative flex min-h-[calc(100vh-76px)] flex-col justify-between py-10 sm:py-14 lg:py-16">
+        <div className="grid flex-1 items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          <div className="relative z-10">
+            <motion.p
+              initial="hidden"
+              animate="show"
+              custom={0.05}
+              variants={fadeUp}
+              className="mb-5 font-serif text-lg italic text-day-burgundy/90 dark:text-night-burgundy/90"
+            >
+              Computer Science Engineering student at IGDTUW
+            </motion.p>
 
-              <motion.div
-                initial="hidden"
-                animate="show"
-                custom={0.25}
-                variants={fadeUp}
-                className="mt-8 h-px w-16 bg-day-ink/30 dark:bg-night-ink/30"
-              />
+            <motion.h1
+              initial="hidden"
+              animate="show"
+              custom={0.12}
+              variants={fadeUp}
+              className="font-sans text-[clamp(5rem,15vw,12rem)] font-black leading-[0.76] tracking-[-0.10em] text-day-ink dark:text-night-ink"
+            >
+              TRISHA
+            </motion.h1>
 
-              <motion.p
-                initial="hidden"
-                animate="show"
-                custom={0.3}
-                variants={fadeUp}
-                className="mt-8 max-w-2xl font-serif text-[clamp(1.875rem,4.4vw,3.25rem)] leading-[1.15] tracking-[-0.01em] text-day-ink dark:text-night-ink"
-              >
-                Building intelligent products through{" "}
-                <em className="font-serif italic text-day-burgundy dark:text-night-burgundy">
-                  code
-                </em>{" "}
-                and{" "}
-                <em className="font-serif italic text-day-burgundy dark:text-night-burgundy">
-                  curiosity.
-                </em>
-              </motion.p>
-
-              <motion.p
-                initial="hidden"
-                animate="show"
-                custom={0.4}
-                variants={fadeUp}
-                className="mt-5 max-w-md text-[15px] leading-relaxed text-day-muted dark:text-night-muted"
-              >
-                Computer Science Engineering student at IGDTUW passionate
-                about AI, Machine Learning and building solutions that create
-                real impact.
-              </motion.p>
-
-              <motion.div
-                initial="hidden"
-                animate="show"
-                custom={0.5}
-                variants={fadeUp}
-                className="mt-8 flex flex-wrap items-center gap-4"
-              >
-                <Button
-                  href="#work"
-                  variant="primary"
-                  icon={<ArrowRight size={16} strokeWidth={1.75} />}
-                >
-                  Explore My Work
-                </Button>
-                <Button
-                  href="https://drive.google.com/file/d/1JD1s-Q_wNp6UQy0gHNjEXSBlgHfpulQm/view?usp=sharing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="secondary"
-                  icon={<ArrowUpRight size={16} strokeWidth={1.75} />}
-                >
-                  Resume
-                </Button>
-              </motion.div>
-            </div>
+            <motion.p
+              initial="hidden"
+              animate="show"
+              custom={0.22}
+              variants={fadeUp}
+              className="mt-8 max-w-2xl font-serif text-[clamp(1.35rem,3vw,2.35rem)] leading-[1.2] text-day-ink/90 dark:text-night-ink/90"
+            >
+              Passionate about AI, ML and building solutions that create real
+              impact.
+            </motion.p>
 
             <motion.div
               initial="hidden"
               animate="show"
-              custom={0.6}
+              custom={0.3}
               variants={fadeUp}
-              className="border-t border-day-border pt-8 dark:border-night-border"
+              className="mt-8 flex flex-wrap gap-x-3 gap-y-2 font-serif text-[clamp(1.35rem,2.8vw,2.1rem)] tracking-tight text-day-burgundy dark:text-night-burgundy"
+            >
+              <span>ENGINEER</span><span>/</span><span>LEARNER</span><span>/</span><span>BUILDER</span>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              animate="show"
+              custom={0.4}
+              variants={fadeUp}
+              className="mt-10 flex flex-wrap gap-4"
+            >
+              <Button href="#work" variant="primary" icon={<ArrowRight size={16} />}>
+                Explore My Work
+              </Button>
+              <Button
+                href="https://drive.google.com/file/d/1JD1s-Q_wNp6UQy0gHNjEXSBlgHfpulQm/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                icon={<ArrowUpRight size={16} />}
+              >
+                Resume
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              animate="show"
+              custom={0.5}
+              variants={fadeUp}
+              className="mt-12 max-w-2xl border-t border-day-border pt-6 dark:border-night-border"
             >
               <QuickInfo />
             </motion.div>
           </div>
 
-          {/* Divider column with vertical identity tag */}
-          <VerticalTag words={["ENGINEER", "LEARNER", "BUILDER"]} />
-
-          {/* Right column — portrait */}
-          <div className="lg:pl-2">
-            <Portrait />
+          <div className="relative z-10 flex flex-col items-center justify-center gap-8 lg:items-end">
+            <motion.div
+              initial="hidden"
+              animate="show"
+              custom={0.15}
+              variants={fadeUp}
+              className="grid grid-cols-1 gap-2 text-center font-serif text-[clamp(1.35rem,2.7vw,2rem)] leading-tight text-day-burgundy dark:text-night-burgundy lg:mr-10 lg:text-right"
+            >
+              <span>AI / ML</span>
+              <span>FULL-STACK DEV</span>
+              <span>ANDROID DEV</span>
+            </motion.div>
+            <div className="w-full max-w-[520px]">
+              <Portrait />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Utility footer bar */}
-      <motion.footer
-        initial="hidden"
-        animate="show"
-        custom={0.7}
-        variants={fadeUp}
-        className="border-t border-day-border dark:border-night-border"
-      >
-        <div className="container-editorial flex items-center justify-between py-5 text-[11px] tracking-[0.14em] uppercase text-day-muted dark:text-night-muted">
-          <span>Designed &amp; Engineered by Trisha</span>
-          <CompassStar className="h-4 w-4 text-day-ink/40 dark:text-night-ink/40" />
-          <span>© 2026</span>
-        </div>
-      </motion.footer>
+        <motion.div
+          initial="hidden"
+          animate="show"
+          custom={0.65}
+          variants={fadeUp}
+          className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-day-border pt-5 text-[12px] tracking-[0.12em] uppercase text-day-muted dark:border-night-border dark:text-night-muted"
+        >
+          <span>CSE @ IGDTUW · 2025—2029 · NEW DELHI, INDIA</span>
+          <span>BUILDING WITH CURIOSITY</span>
+        </motion.div>
+      </div>
     </section>
   );
 }

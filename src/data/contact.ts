@@ -8,4 +8,8 @@ export const contact = {
     url: "https://github.com/trisha29807-del",
     display: "github.com/trisha29807-del",
   },
+  leetcode: {
+    url: "https://leetcode.com/u/trisha29807/",
+    display: "leetcode.com/u/trisha29807",
+  },
 };

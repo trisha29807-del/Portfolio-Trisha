@@ -22,10 +22,11 @@ export const milestones: Milestone[] = [
   },
   {
     number: "02",
-    eyebrow: "220+ Problems Solved",
+    eyebrow: "250+ Problems Solved",
     title: "LeetCode · Data Structures & Algorithms",
     description:
       "A continuing problem-solving journey across Data Structures & Algorithms.",
     year: "2026",
+    link: { href: "https://leetcode.com/u/trisha29807/", label: "View LeetCode Profile ↗" },
   },
 ];

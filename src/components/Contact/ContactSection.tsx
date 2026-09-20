@@ -24,7 +24,7 @@ export function ContactSection() {
       {/* minimal line-art pen — extremely subtle, never competes with the headline */}
       <PenMark className="pointer-events-none absolute right-[8%] top-[18%] hidden h-40 w-48 text-[#B9B7FF]/15 dark:text-[#B9B7FF]/20 lg:block" />
 
-      <div className="container-editorial relative py-4 sm:py-5">
+      <div className="container-editorial relative py-6 sm:py-8>
         <div className="flex gap-6 sm:gap-10">
           {/* left rail — number, vertical line, marker */}
           <motion.div
@@ -40,7 +40,7 @@ export function ContactSection() {
           </motion.div>
 
           {/* main content */}
-          <div className="min-w-0 flex-1 pb-6 sm:pb-7">
+          <div className="min-w-0 flex-1 pb-10 sm:pb-12>
             <motion.span
               initial="hidden"
               whileInView="show"
@@ -87,7 +87,7 @@ export function ContactSection() {
               custom={0.26}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-5"
+              className="mt-7
             >
               <Button
                 href={`mailto:${contact.email}`}
@@ -104,7 +104,7 @@ export function ContactSection() {
               custom={0.34}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-6 grid grid-cols-2 gap-x-5 gap-y-3 border-t border-[#294777] pt-5 dark:border-[#294777] sm:mt-7 sm:grid-cols-4 sm:gap-x-5 sm:pt-5"
+              className="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[#294777] pt-8 dark:border-[#294777] sm:mt-12 sm:grid-cols-4 sm:gap-x-5 sm:pt-7"
             >
               <ContactRoute
                 icon={Mail}

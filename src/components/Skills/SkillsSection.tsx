@@ -30,17 +30,6 @@ export function SkillsSection() {
       id="skills"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      {/* oversized background typography — centered behind the panel grid, integrated rather than corner-cropped */}
-      <motion.div
-        aria-hidden="true"
-        style={{ y: bgY }}
-        className="pointer-events-none absolute inset-x-0 top-[22%] flex justify-center"
-      >
-        <span className="select-none font-seasons text-[30rem] leading-none text-white/[0.04] dark:text-white/[0.04] sm:text-[38rem]">
-          04
-        </span>
-      </motion.div>
-
       <div className="container-editorial relative pt-2 sm:pt-3">
         {/* Section header */}
         <motion.div
@@ -50,7 +39,6 @@ export function SkillsSection() {
           variants={fadeUp}
         >
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
-            04
           </span>
           <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-white dark:text-white">
             Skills

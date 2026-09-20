@@ -26,18 +26,7 @@ export function AchievementsSection() {
       id="achievements"
       className="relative overflow-hidden bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      {/* oversized background numeral, integrated behind the header */}
-      <motion.div
-        aria-hidden="true"
-        style={{ y: bgY }}
-        className="pointer-events-none absolute inset-x-0 top-[6%] flex justify-end pr-4 sm:pr-12"
-      >
-        <span className="select-none font-seasons text-[22rem] leading-none text-white/[0.035] dark:text-white/[0.035] sm:text-[28rem]">
-          06
-        </span>
-      </motion.div>
-
-      <div className="container-editorial relative pt-12 sm:pt-16">
+      <div className="container-editorial relative pt-7 sm:pt-9">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -56,12 +45,12 @@ export function AchievementsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-7 sm:mt-9">
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
         {/* Numbered editorial timeline */}
-        <div className="relative py-9 sm:py-12">
+        <div className="relative py-6 sm:py-8">
           <div className="absolute left-[3px] top-3 bottom-3 w-px bg-[#7FDFFF]/15 dark:bg-[#7FDFFF]/15" />
 
           <div className="flex flex-col">

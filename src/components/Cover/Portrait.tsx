@@ -1,33 +1,29 @@
 import { motion } from "framer-motion";
 import portrait from "@/assets/portrait.jpg";
 
-/**
- * This renders the final, untouched portrait asset exactly as supplied —
- * no color grading, background swap, or AI enhancement is applied here.
- * Only layout-level presentation (crop framing, corner radius, shadow,
- * and a soft ambient glow) is handled in this component.
- */
 export function Portrait() {
   return (
-    <div className="relative aspect-[4/5] w-full lg:aspect-[27/34]">
-      {/* soft burgundy ambient glow, sitting behind the photo */}
+    <div className="relative mx-auto aspect-square w-full max-w-[520px]">
       <div
         aria-hidden="true"
-        className="absolute -inset-8 -z-10 rounded-[28px] bg-[radial-gradient(ellipse_at_center,rgba(122,22,38,0.28),transparent_72%)] blur-3xl dark:bg-[radial-gradient(ellipse_at_center,rgba(199,73,92,0.24),transparent_72%)]"
+        className="absolute -inset-10 rounded-full bg-[radial-gradient(circle,rgba(104,116,255,0.32),transparent_68%)] blur-2xl"
       />
-
-      <motion.figure
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.15, ease: [0.65, 0, 0.35, 1] }}
-        className="relative h-full w-full overflow-hidden rounded-[18px] shadow-[0_24px_60px_rgba(60,20,20,0.12)] dark:shadow-[0_24px_60px_rgba(0,0,0,0.4)]"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.94 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9, delay: 0.18, ease: [0.65, 0, 0.35, 1] }}
+        className="relative h-full w-full overflow-hidden rounded-full border-2 border-day-burgundy/80 p-2 shadow-[0_0_80px_rgba(86,103,255,0.22)] dark:border-night-burgundy/80"
       >
-        <img
-          src={portrait}
-          alt="Editorial portrait of Trisha"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-        />
-      </motion.figure>
+        <div className="h-full w-full overflow-hidden rounded-full">
+          <img
+            src={portrait}
+            alt="Portrait of Trisha"
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
+      </motion.div>
+      <span className="absolute -right-2 top-10 h-3 w-3 rounded-full bg-day-burgundy shadow-[0_0_20px_rgba(185,181,255,0.9)]" />
+      <span className="absolute -left-3 bottom-20 h-2.5 w-2.5 rounded-full bg-[#6EA8FF] shadow-[0_0_18px_rgba(110,168,255,0.8)]" />
     </div>
   );
 }

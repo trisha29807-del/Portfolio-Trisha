@@ -69,73 +69,31 @@
   }
 
 
-  /* Continuous ambient circles — the same animated background flows through every section. */
+  /* Continuous hero-style atmosphere across the entire portfolio. */
   main {
     position: relative;
     overflow: hidden;
-    background: #050D32;
+    background-color: #050D32;
+    background-image:
+      radial-gradient(circle at -2% 0%, rgba(49, 87, 139, 0.55) 0, rgba(49, 87, 139, 0.24) 13rem, transparent 23rem),
+      radial-gradient(circle at 103% 0%, rgba(156, 166, 255, 0.48) 0, rgba(156, 166, 255, 0.20) 13rem, transparent 24rem),
+      radial-gradient(circle at 18% 96%, rgba(25, 60, 114, 0.62) 0, rgba(25, 60, 114, 0.24) 15rem, transparent 27rem),
+      radial-gradient(circle at 69% 34%, rgba(43, 79, 134, 0.48) 0, rgba(43, 79, 134, 0.16) 13rem, transparent 25rem),
+      radial-gradient(circle at 61% 82%, rgba(40, 78, 136, 0.38) 0, rgba(40, 78, 136, 0.13) 10rem, transparent 22rem),
+      radial-gradient(circle at 108% 94%, rgba(73, 108, 165, 0.32) 0, rgba(73, 108, 165, 0.12) 12rem, transparent 23rem);
+    background-attachment: fixed;
+    background-size: 100% 100%;
   }
 
   main > section[id]:not(#cover) {
     position: relative;
-    overflow: hidden;
     background: transparent !important;
-  }
-
-  main > section[id]:not(#cover)::before,
-  main > section[id]:not(#cover)::after {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
-    border-radius: 9999px;
-    will-change: transform;
-    box-sizing: border-box;
-  }
-
-  main > section[id]:not(#cover)::before {
-    width: clamp(190px, 25vw, 370px);
-    height: clamp(190px, 25vw, 370px);
-    top: 6%;
-    right: -8%;
-    border: 1px solid rgba(235, 237, 255, 0.18);
-    background: radial-gradient(circle, rgba(174, 181, 255, 0.16) 0%, rgba(113, 128, 255, 0.07) 42%, transparent 72%);
-    box-shadow: 0 0 70px rgba(174, 181, 255, 0.08);
-    animation: portfolio-orb-a 18s ease-in-out infinite alternate;
-  }
-
-  main > section[id]:not(#cover)::after {
-    width: clamp(155px, 21vw, 310px);
-    height: clamp(155px, 21vw, 310px);
-    left: -8%;
-    bottom: 4%;
-    border: 1px solid rgba(221, 247, 255, 0.14);
-    background: radial-gradient(circle, rgba(91, 190, 235, 0.15) 0%, rgba(53, 151, 221, 0.06) 42%, transparent 72%);
-    box-shadow: 0 0 60px rgba(91, 190, 235, 0.07);
-    animation: portfolio-orb-b 22s ease-in-out infinite alternate;
   }
 
   main > section[id]:not(#cover) > * {
     position: relative;
     z-index: 1;
   }
-
-  /* Stagger the same motion across sections so the circles feel like one continuous flow. */
-  main > section:nth-of-type(2)::before { animation-delay: -2s; }
-  main > section:nth-of-type(3)::before { animation-delay: -4s; }
-  main > section:nth-of-type(4)::before { animation-delay: -6s; }
-  main > section:nth-of-type(5)::before { animation-delay: -8s; }
-  main > section:nth-of-type(6)::before { animation-delay: -10s; }
-  main > section:nth-of-type(7)::before { animation-delay: -12s; }
-  main > section:nth-of-type(8)::before { animation-delay: -14s; }
-
-  main > section:nth-of-type(2)::after { animation-delay: -3s; }
-  main > section:nth-of-type(3)::after { animation-delay: -6s; }
-  main > section:nth-of-type(4)::after { animation-delay: -9s; }
-  main > section:nth-of-type(5)::after { animation-delay: -12s; }
-  main > section:nth-of-type(6)::after { animation-delay: -15s; }
-  main > section:nth-of-type(7)::after { animation-delay: -18s; }
-  main > section:nth-of-type(8)::after { animation-delay: -21s; }
 
   @keyframes portfolio-orb-a {
     0% { transform: translate3d(0, 0, 0) scale(1); }

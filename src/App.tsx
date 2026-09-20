@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Navbar } from "@/components/layout/Navbar";
 import { Cover } from "@/components/Cover/Cover";
+import { AboutSection } from "@/components/About/AboutSection";
 import { WorkSection } from "@/components/Work/WorkSection";
 import { EducationSection } from "@/components/Education/EducationSection";
 import { SkillsSection } from "@/components/Skills/SkillsSection";
@@ -14,6 +15,7 @@ function App() {
       <Navbar />
       <main>
         <Cover />
+        <AboutSection />
         <WorkSection />
         <EducationSection />
         <SkillsSection />

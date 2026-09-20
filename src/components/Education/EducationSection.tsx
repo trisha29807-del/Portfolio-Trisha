@@ -178,7 +178,7 @@ export function EducationSection() {
             Academic Highlights
           </motion.span>
 
-          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16>"
+          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
             {highlights.map((h, i) => (
               <motion.div
                 key={h.label}

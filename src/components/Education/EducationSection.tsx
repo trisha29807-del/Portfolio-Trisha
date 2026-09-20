@@ -58,7 +58,7 @@ export function EducationSection() {
         style={{ y: bgY }}
         className="pointer-events-none absolute -top-10 right-0 select-none font-serif text-[26rem] leading-none text-day-ink/[0.035] dark:text-night-ink/[0.035] sm:text-[34rem]"
       >
-        02
+        03
       </motion.span>
 
       <div className="container-editorial relative pt-20 sm:pt-28">
@@ -70,9 +70,9 @@ export function EducationSection() {
           variants={fadeUp}
         >
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-day-burgundy dark:text-night-burgundy">
-            02
+            03
           </span>
-          <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-day-ink dark:text-night-ink">
+          <h2 className="mt-4 font-serif text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-day-ink dark:text-night-ink">
             Education
           </h2>
           <p className="mt-5 max-w-[38ch] font-serif text-[19px] italic leading-relaxed text-day-muted dark:text-night-muted">

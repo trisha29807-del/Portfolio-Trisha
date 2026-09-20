@@ -37,7 +37,7 @@
 @layer base {
   :root {
     /* One knob for the whole page: the space between any two sections. */
-    --section-gap: clamp(2.25rem, 4vw, 3.5rem);
+    --section-gap: clamp(4rem, 6vw, 5.5rem);
     /* Sticky navbar height once scrolled — used as scroll offset for anchors. */
     --nav-offset: 4.2rem;
   }
@@ -105,18 +105,11 @@
     z-index: 1;
   }
 
-  /* Uniform section rhythm.
-     Every top-level section gets half of --section-gap above and below, so the
-     space between ANY two sections is exactly --section-gap. Direct children
-     have their own top/bottom padding zeroed so nothing adds to that. */
+  /* Continuous section rhythm: generous breathing room, but no page-like panels. */
   main > section[id]:not(#cover) {
     margin-block: 0 !important;
     padding-block: calc(var(--section-gap) / 2) !important;
     scroll-margin-top: var(--nav-offset);
-  }
-
-  main > section[id]:not(#cover) > :not([aria-hidden="true"]) {
-    padding-block: 0 !important;
   }
 
   main > section#contact[id]:not(#cover) {

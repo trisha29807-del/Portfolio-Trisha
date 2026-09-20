@@ -60,7 +60,7 @@ export function Cover() {
             <span>ANDROID DEV</span>
           </motion.div>
 
-          <div className="absolute right-[7%] top-[25%] z-10 w-[min(31vw,430px)] min-w-[260px] md:right-[7%] lg:right-[8%]">
+          <div className="absolute right-[6%] top-[26%] z-10 w-[min(29vw,410px)] min-w-[250px] md:right-[7%] lg:right-[8%] lg:top-[26%]">
             <Portrait />
           </div>
 

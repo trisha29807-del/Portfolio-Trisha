@@ -37,7 +37,7 @@ export function AchievementsSection() {
         </span>
       </motion.div>
 
-      <div className="container-editorial relative pt-20 sm:pt-28">
+      <div className="container-editorial relative pt-12 sm:pt-16">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -56,12 +56,12 @@ export function AchievementsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 sm:mt-16">
+        <div className="mt-7 sm:mt-9">
           <AnimatedDivider />
         </div>
 
         {/* Numbered editorial timeline */}
-        <div className="relative py-16 sm:py-20">
+        <div className="relative py-9 sm:py-12">
           <div className="absolute left-[3px] top-3 bottom-3 w-px bg-[#7FDFFF]/15 dark:bg-[#7FDFFF]/15" />
 
           <div className="flex flex-col">
@@ -74,7 +74,7 @@ export function AchievementsSection() {
                 viewport={{ once: true, margin: "-10% 0px" }}
                 variants={fadeUp}
                 className={`group relative pl-10 ${
-                  i > 0 ? "mt-14 border-t border-[#294777] pt-14 dark:border-[#294777] sm:mt-16 sm:pt-16" : ""
+                  i > 0 ? "mt-8 border-t border-[#294777] pt-14 dark:border-[#294777] sm:mt-10 sm:pt-10" : ""
                 }`}
               >
                 <span

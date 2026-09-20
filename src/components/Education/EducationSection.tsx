@@ -61,7 +61,7 @@ export function EducationSection() {
         03
       </motion.span>
 
-      <div className="container-editorial relative pt-7 sm:pt-9">
+      <div className="container-editorial relative pt-2 sm:pt-3">
         {/* Section header */}
         <motion.div
           initial="hidden"

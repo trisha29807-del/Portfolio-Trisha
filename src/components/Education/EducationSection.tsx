@@ -71,7 +71,7 @@ export function EducationSection() {
           </p>
         </motion.div>
 
-        <div className="mt-5 sm:mt-6>
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
@@ -178,7 +178,7 @@ export function EducationSection() {
             Academic Highlights
           </motion.span>
 
-          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16>
+          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16>"
             {highlights.map((h, i) => (
               <motion.div
                 key={h.label}

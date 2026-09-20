@@ -58,7 +58,7 @@ export function ContactSection() {
               custom={0.1}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="mt-6 font-boldfat text-[clamp(2.8rem,5.5vw,5.2rem)] leading-[1.08] text-white dark:text-white"
+              className="mt-3 font-boldfat text-[clamp(2.8rem,5.5vw,5.2rem)] leading-[1.08] text-white dark:text-white"
             >
               Let&rsquo;s build something
               <br />

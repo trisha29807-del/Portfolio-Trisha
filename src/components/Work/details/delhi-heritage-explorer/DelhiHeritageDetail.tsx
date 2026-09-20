@@ -526,9 +526,7 @@ export function DelhiHeritageDetail() {
             <p className="max-w-2xl text-[14px] leading-relaxed text-day-muted dark:text-night-muted">
               {hackathon.body}
             </p>
-            <p className="mt-4 text-[12px] text-day-muted/80 dark:text-night-muted/80">
-              Team: {team.join(" · ")}
-            </p>
+            
           </div>
         </div>
       </section>

@@ -35,6 +35,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* One knob for the whole page: the space between any two sections. */
+    --section-gap: clamp(3rem, 6vw, 5rem);
+    /* Sticky navbar height once scrolled — used as scroll offset for anchors. */
+    --nav-offset: 4.2rem;
+  }
+
   * {
     @apply border-day-border;
   }
@@ -85,12 +92,47 @@
     background-size: 100% 100%;
   }
 
+  /* Slow drifting glow behind the sections (visible through the transparent ones).
+     Cheap on purpose: radial gradients + transforms only, no blur filters. */
+  main {
+    isolation: isolate;
+  }
+
+  main::before,
+  main::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    width: 42rem;
+    height: 42rem;
+    border-radius: 9999px;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  main::before {
+    top: 6%;
+    left: -14rem;
+    background: radial-gradient(circle, rgba(105, 119, 200, 0.22) 0, transparent 65%);
+    animation: portfolio-orb-a 28s ease-in-out infinite alternate;
+  }
+
+  main::after {
+    right: -16rem;
+    bottom: 2%;
+    background: radial-gradient(circle, rgba(49, 87, 139, 0.32) 0, transparent 65%);
+    animation: portfolio-orb-b 34s ease-in-out infinite alternate;
+  }
+
   main > section[id]:not(#cover) {
     position: relative;
     background: transparent !important;
   }
 
-  main > section[id]:not(#cover) > * {
+  /* Content sits above the background glows. Decorative (aria-hidden) layers are
+     excluded so their own `absolute` positioning isn't overridden — otherwise they
+     fall into normal flow and push the section content down. */
+  main > section[id]:not(#cover) > *:not([aria-hidden="true"]) {
     position: relative;
     z-index: 1;
   }
@@ -109,7 +151,34 @@
     100% { transform: translate3d(5vw, 10vh, 0) scale(1.02); }
   }
 
-  /* Clean section rhythm: sections should touch naturally without editorial dead space. */
+  /* Uniform section rhythm.
+     Every top-level section gets half of --section-gap above and below, so the
+     space between ANY two sections is exactly --section-gap. Direct children
+     have their own top/bottom padding zeroed so nothing adds to that. */
+  main > section[id]:not(#cover) {
+    margin-block: 0 !important;
+    padding-block: calc(var(--section-gap) / 2) !important;
+    scroll-margin-top: var(--nav-offset);
+  }
+
+  main > section[id]:not(#cover) > :not([aria-hidden="true"]) {
+    padding-block: 0 !important;
+  }
+
+  /* First section after the hero, and the page footer, get the full gap. */
+  main > #cover + section[id]:not(#cover) {
+    padding-top: var(--section-gap) !important;
+  }
+
+  main > section#contact[id]:not(#cover) {
+    padding-bottom: 0 !important;
+  }
+
+  main > section#contact[id]:not(#cover) > footer {
+    margin-top: calc(var(--section-gap) / 2);
+  }
+
+  /* Nested case-study sections (inside Work) keep their original behaviour. */
   section[id]:not(#cover) {
     margin-block: 0 !important;
     padding-block-end: 0 !important;
@@ -158,5 +227,12 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main::before,
+  main::after {
+    animation: none !important;
   }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { scrollToTarget } from "@/lib/smoothScroll";
 import {
   ExternalLink,
   Github,
@@ -175,11 +176,8 @@ export function DelhiHeritageDetail() {
     return () => observer.disconnect();
   }, []);
 
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+    const scrollTo = (id: string) => {
+    scrollToTarget(id);
   };
 
   return (

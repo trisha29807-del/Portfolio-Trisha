@@ -41,20 +41,20 @@ export function ExperienceSection() {
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             05
           </span>
-          <h2 className="mt-5 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
+          <h2 className="mt-4 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
             Experience
           </h2>
-          <p className="mt-6 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
+          <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
             Where learning became practice.
           </p>
         </motion.div>
 
-        <div className="mt-8 sm:mt-9">
+        <div className="mt-5 sm:mt-6">
           <AnimatedDivider />
         </div>
 
         {/* Three-column editorial composition */}
-        <div className="grid grid-cols-1 gap-16 py-9 sm:py-11 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
+        <div className="grid grid-cols-1 gap-14 py-6 sm:py-8 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
           {/* LEFT — date / role / org, with a timeline marker */}
           <motion.div
             initial="hidden"

@@ -28,7 +28,7 @@ export function AboutSection() {
             <div className="flex items-center gap-4 text-[#B9F0FF]">
               <span className="font-seasons text-sm">01</span>
               <span className="h-px w-14 bg-[#7C8EDB]" />
-              <span className="font-mager text-xs tracking-[0.18em]">ABOUT ME</span>
+              <span className="font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[-0.03em] text-white">ABOUT ME</span>
             </div>
 
             <h2 className="mt-5 max-w-5xl font-boldfat text-[clamp(3.3rem,7vw,6.6rem)] leading-[0.82] tracking-[-0.04em] text-white">

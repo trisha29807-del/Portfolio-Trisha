@@ -33,7 +33,7 @@ export function WorkSection() {
       id="work"
       className="bg-[#050D32] text-white transition-colors duration-700 ease-[cubic-bezier(0.65,0,0.35,1)] dark:bg-[#050D32] dark:text-white"
     >
-      <div className="container-editorial pt-7 sm:pt-9">
+      <div className="container-editorial pt-2 sm:pt-3">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
           <motion.div
             initial="hidden"

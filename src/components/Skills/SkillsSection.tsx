@@ -41,7 +41,7 @@ export function SkillsSection() {
         </span>
       </motion.div>
 
-      <div className="container-editorial relative pt-20 sm:pt-28">
+      <div className="container-editorial relative pt-12 sm:pt-16">
         {/* Section header */}
         <motion.div
           initial="hidden"
@@ -60,7 +60,7 @@ export function SkillsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 sm:mt-16">
+        <div className="mt-7 sm:mt-9">
           <AnimatedDivider />
         </div>
 
@@ -68,7 +68,7 @@ export function SkillsSection() {
             items-start lets each panel keep its own natural height, so
             AI & ML (more tags) and the CS list panel read taller than
             their neighbours instead of being stretched to match. */}
-        <div className="grid grid-cols-1 items-start gap-5 py-16 sm:grid-cols-2 sm:py-20 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-5 py-9 sm:grid-cols-2 sm:py-12 lg:grid-cols-3">
           {skillCategories.map((category, i) => (
             <SkillPanel
               key={category.number}

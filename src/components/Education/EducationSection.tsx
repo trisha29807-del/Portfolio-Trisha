@@ -47,7 +47,7 @@ export function EducationSection() {
           <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
             03
           </span>
-          <h2 className="mt-4 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#B9B7FF] dark:text-[#B9B7FF]">
+          <h2 className="mt-4 font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#7FDFFF]">
             Education
           </h2>
           <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">

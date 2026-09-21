@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { ArrowUpRight, Github } from "lucide-react";
-import shapWaterfall from "@/assets/shap-waterfall.png";
 
 const RESEARCH_URL =
   "https://drive.google.com/file/d/1dkGCQcGaTnkIngruiT7oCiB3d-b1QGYn/view?usp=sharing";
@@ -60,21 +59,15 @@ export function FakeNewsDetail() {
       </DetailSection>
 
       <DetailSection number="03" title="Explainability">
-        <p className="mb-4">
+        <p>
           Every prediction is paired with{" "}
           <strong className="font-semibold">SHAP</strong> and{" "}
           <strong className="font-semibold">LIME</strong> attribution,
-          showing which words pushed the model toward its decision. Below is
-          an actual SHAP waterfall plot exported from the trained model,
-          showing how individual words accumulate toward a "fake" prediction.
+          showing which words pushed the model toward its decision. The plot
+          on the project card above is an actual SHAP waterfall exported from
+          the trained model, showing how individual words accumulate toward a
+          "fake" prediction.
         </p>
-        <div className="overflow-hidden rounded-md border border-day-border dark:border-night-border">
-          <img
-            src={shapWaterfall}
-            alt="Real SHAP waterfall plot showing word-level feature attribution for a fake news prediction"
-            className="w-full"
-          />
-        </div>
       </DetailSection>
 
       <DetailSection number="04" title="Generative Explanation">

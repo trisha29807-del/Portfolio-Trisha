@@ -31,7 +31,7 @@ export function AboutSection() {
               </span>
             </div>
 
-            <h2 className="mt-5 max-w-5xl font-boldfat text-[clamp(3.3rem,7vw,6.6rem)] leading-[0.82] tracking-[-0.04em] text-white">
+            <h2 className="mt-5 max-w-5xl font-boldfat text-[clamp(3.3rem,5.5vw,6.6rem)] leading-[0.82] tracking-[-0.04em] text-white">
               I BUILD
               <span className="block text-[#B9B7FF]">WITH PURPOSE.</span>
             </h2>

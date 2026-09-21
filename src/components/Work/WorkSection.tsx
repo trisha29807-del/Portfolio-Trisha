@@ -47,7 +47,7 @@ export function WorkSection() {
             <h2 className="mt-5 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#B9B7FF] dark:text-[#B9B7FF]">
               Selected Works
             </h2>
-            <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-white dark:text-white">
+            <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.03] text-white dark:text-white">
               A collection of ideas,{" "}
               <em className="font-seasons italic text-[#B9B7FF] dark:text-[#B9B7FF]">
                 products and experiments
@@ -79,7 +79,8 @@ export function WorkSection() {
           return (
             <ProjectRow
               key={project.slug}
-              project={project}
+              // alternate sides by position: image left, image right, image left, ...
+              project={{ ...project, imageSide: i % 2 === 0 ? "left" : "right" }}
               mockup={<Mockup />}
               detail={Detail ? <Detail /> : undefined}
             />

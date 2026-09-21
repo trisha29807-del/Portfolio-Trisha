@@ -3,17 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import igdtuwLogo from "@/assets/igdtuw-logo.png";
 import { AnimatedDivider } from "@/components/shared/AnimatedDivider";
 
-const subjects = [
-  "Data Structures & Algorithms",
-  "Object-Oriented Programming",
-  "Database Management Systems",
-  "Operating Systems",
-  "Computer Networks",
-  "Software Engineering",
-  "Artificial Intelligence",
-  "Machine Learning",
-];
-
 const exploring = [
   "Artificial Intelligence",
   "Large Language Models",
@@ -21,11 +10,6 @@ const exploring = [
   "Full Stack Development",
   "Product Design",
   "UI/UX",
-];
-
-const highlights = [
-  { value: "94.4%", label: "Secondary School (Class X)" },
-  { value: "93.8%", label: "Senior Secondary (Class XII)" },
 ];
 
 const fadeUp = {
@@ -131,75 +115,6 @@ export function EducationSection() {
               </p>
             </div>
           </motion.div>
-        </div>
-
-        <AnimatedDivider />
-
-        {/* Academic Foundation */}
-        <div className="py-6 sm:py-8">
-          <motion.span
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-10% 0px" }}
-            variants={fadeUp}
-            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
-          >
-            Academic Foundation
-          </motion.span>
-
-          <div className="mt-8 grid grid-cols-1 gap-x-12 sm:grid-cols-2">
-            {subjects.map((subject, i) => (
-              <motion.div
-                key={subject}
-                initial="hidden"
-                whileInView="show"
-                custom={0.04 * i}
-                viewport={{ once: true, margin: "-10% 0px" }}
-                variants={fadeUp}
-                className="group relative border-b border-[#294777] py-4 dark:border-[#294777] sm:py-5"
-              >
-                <span className="relative text-[15px] text-white dark:text-white">
-                  {subject}
-                  <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#7FDFFF] transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:w-full dark:bg-[#7FDFFF]" />
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <AnimatedDivider />
-
-        {/* Academic Highlights */}
-        <div className="py-6 sm:py-8">
-          <motion.span
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-10% 0px" }}
-            variants={fadeUp}
-            className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]"
-          >
-            Academic Highlights
-          </motion.span>
-
-          <div className="mt-7 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-16">
-            {highlights.map((h, i) => (
-              <motion.div
-                key={h.label}
-                initial="hidden"
-                whileInView="show"
-                custom={0.1 * i}
-                viewport={{ once: true, margin: "-10% 0px" }}
-                variants={fadeUp}
-              >
-                <div className="font-seasons text-[clamp(3rem,7vw,5.5rem)] leading-none text-[#B9B7FF] dark:text-[#B9B7FF]">
-                  {h.value}
-                </div>
-                <p className="mt-3 text-[14px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
-                  {h.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
 
         <AnimatedDivider />

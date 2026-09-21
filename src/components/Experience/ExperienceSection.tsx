@@ -74,7 +74,7 @@ export function ExperienceSection() {
 
           {/* What I worked on */}
           <div>
-            <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
+            <span className="text-[10px] sm:text-[13px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               {project.name}
             </span>
 
@@ -82,7 +82,7 @@ export function ExperienceSection() {
               {project.bullets.map((b) => (
                 <li
                   key={b.bold}
-                  className="flex gap-2.5 text-[13px] sm:text-[13.5px] leading-[1.5] text-white/85 dark:text-white/85"
+                  className="flex gap-2.5 text-[13px] sm:text-[15px] leading-[1.5] text-white/85 dark:text-white/85"
                 >
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />
                   <span>

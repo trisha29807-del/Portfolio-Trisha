@@ -81,7 +81,7 @@ export function Cover() {
             </motion.div>
           </div>
 
-          <motion.p initial="hidden" animate="show" custom={0.58} variants={fadeUp} className="absolute bottom-[3%] left-[6%] z-20 font-seasons text-[clamp(.9rem,1.3vw,1.15rem)] text-[#91DFFF]">
+          <motion.p initial="hidden" animate="show" custom={0.58} variants={fadeUp} className="absolute bottom-[3%] left-[14%] z-20 font-seasons text-[clamp(.9rem,1.3vw,1.15rem)] text-[#91DFFF]">
             CSE @ IGDTUW · 2025—2029 · NEW DELHI, INDIA
           </motion.p>
         </div>

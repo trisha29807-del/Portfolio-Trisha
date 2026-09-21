@@ -44,7 +44,7 @@ export function WorkSection() {
             <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               02
             </span>
-            <h2 className="mt-5 font-mager text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#B9B7FF] dark:text-[#B9B7FF]">
+            <h2 className="mt-5 font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#7FDFFF]">
               Selected Works
             </h2>
             <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.03] text-white dark:text-white">

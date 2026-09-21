@@ -13,7 +13,7 @@ const shapBars = [
  */
 export function ProjectPreview() {
   return (
-    <div className="rounded-lg border border-day-border bg-day-surface/40 p-5 dark:border-night-border dark:bg-night-surface/40">
+    <div className="rounded-lg border border-day-border bg-day-surface/40 p-3.5 dark:border-night-border dark:bg-night-surface/40">
       <div className="flex items-center justify-between">
         <span className="text-[10px] font-semibold tracking-[0.22em] uppercase text-day-muted dark:text-night-muted">
           Project Preview
@@ -23,13 +23,13 @@ export function ProjectPreview() {
         </span>
       </div>
 
-      <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-3">
         {/* Model prediction */}
-        <div className="rounded-md border border-day-border bg-day-bg p-3 dark:border-night-border dark:bg-night-bg">
+        <div className="rounded-md border border-day-border bg-day-bg p-2.5 dark:border-night-border dark:bg-night-bg">
           <div className="text-[10px] font-medium text-day-muted dark:text-night-muted">
             Model Prediction
           </div>
-          <div className="mt-3 flex items-center gap-2">
+          <div className="mt-2 flex items-center gap-2">
             <span className="rounded border border-day-burgundy/40 px-2 py-1 font-serif text-[13px] italic text-day-burgundy dark:border-night-burgundy/40 dark:text-night-burgundy">
               Fake
             </span>
@@ -37,7 +37,7 @@ export function ProjectPreview() {
               Real
             </span>
           </div>
-          <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-day-border/60 dark:bg-night-border/60">
+          <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-day-border/60 dark:bg-night-border/60">
             <div className="h-full w-2/3 rounded-full bg-day-burgundy/60 dark:bg-night-burgundy/60" />
           </div>
         </div>
@@ -47,7 +47,7 @@ export function ProjectPreview() {
           <div className="text-[10px] font-medium text-day-muted dark:text-night-muted">
             SHAP Explanation
           </div>
-          <div className="mt-3 flex flex-col gap-1.5">
+          <div className="mt-2 flex flex-col gap-1">
             {shapBars.map((bar, i) => (
               <div key={i} className="h-1.5 overflow-hidden rounded-full bg-day-border/60 dark:bg-night-border/60">
                 <div
@@ -68,10 +68,10 @@ export function ProjectPreview() {
           <div className="text-[10px] font-medium text-day-muted dark:text-night-muted">
             LLM Explanation
           </div>
-          <div className="mt-2 text-[11px] text-day-ink/70 dark:text-night-ink/70">
+          <div className="mt-1.5 text-[10.5px] text-day-ink/70 dark:text-night-ink/70">
             Plain-English Summary
           </div>
-          <div className="mt-2 flex flex-col gap-1.5">
+          <div className="mt-1.5 flex flex-col gap-1">
             {[95, 85, 70].map((w, i) => (
               <div
                 key={i}

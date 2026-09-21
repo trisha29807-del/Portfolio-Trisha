@@ -54,7 +54,7 @@ export function ExperienceSection() {
         </div>
 
         {/* Three-column editorial composition */}
-        <div className="grid grid-cols-1 gap-14 py-6 sm:py-8 lg:grid-cols-[240px_1fr_260px] lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 py-4 sm:py-5 lg:grid-cols-[220px_1fr_230px] lg:gap-8">
           {/* LEFT — date / role / org, with a timeline marker */}
           <motion.div
             initial="hidden"
@@ -62,7 +62,7 @@ export function ExperienceSection() {
             custom={0.05}
             viewport={{ once: true, margin: "-10% 0px" }}
             variants={fadeUp}
-            className="relative pl-6"
+            className="relative pl-5"
           >
             <span className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7FDFFF] dark:bg-[#7FDFFF]" />
             <span className="absolute left-[3px] top-4 bottom-0 w-px bg-[#7FDFFF]/25 dark:bg-[#7FDFFF]/25" />
@@ -71,20 +71,20 @@ export function ExperienceSection() {
               {experience.dateRange}
             </span>
 
-            <h3 className="mt-3 font-seasons text-[1.5rem] leading-tight text-white dark:text-white">
+            <h3 className="mt-2 font-seasons text-[1.35rem] leading-tight text-white dark:text-white">
               {experience.role}
             </h3>
 
-            <div className="mt-6 h-px w-8 bg-day-border dark:bg-night-border" />
+            <div className="mt-4 h-px w-8 bg-day-border dark:bg-night-border" />
 
-            <p className="mt-4 text-[15px] text-white dark:text-white">
+            <p className="mt-3 text-[14px] text-white dark:text-white">
               {experience.org}
             </p>
-            <p className="mt-1 font-seasons text-[14px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
+            <p className="mt-1 font-seasons text-[13px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
               {experience.collaboration}
             </p>
 
-            <p className="mt-6 text-[13px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
+            <p className="mt-4 text-[12px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
               {experience.format}
             </p>
           </motion.div>
@@ -101,20 +101,20 @@ export function ExperienceSection() {
             <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               {project.label}
             </span>
-            <h3 className="mt-3 font-seasons text-[clamp(1.75rem,3vw,2.5rem)] leading-tight text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-[#B9B7FF] dark:text-white dark:group-hover:text-[#B9B7FF]">
+            <h3 className="mt-2 font-seasons text-[clamp(1.6rem,2.5vw,2.2rem)] leading-tight text-white transition-colors duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] group-hover:text-[#B9B7FF] dark:text-white dark:group-hover:text-[#B9B7FF]">
               {project.name}
             </h3>
-            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
+            <p className="mt-3 max-w-xl text-[14px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
               {project.description}
             </p>
 
-            <div className="mt-4 h-px w-full bg-day-border dark:bg-night-border" />
+            <div className="mt-3 h-px w-full bg-day-border dark:bg-night-border" />
 
-            <ul className="mt-6 flex flex-col gap-4">
+            <ul className="mt-4 flex flex-col gap-2.5">
               {project.bullets.map((b) => (
                 <li
                   key={b.bold}
-                  className="flex gap-3 text-[14.5px] leading-relaxed text-white/85 dark:text-white/85"
+                  className="flex gap-2.5 text-[13.5px] leading-[1.45] text-white/85 dark:text-white/85"
                 >
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />
                   <span>
@@ -128,7 +128,7 @@ export function ExperienceSection() {
               ))}
             </ul>
 
-            <div className="mt-8">
+            <div className="mt-5">
               <ProjectPreview />
             </div>
           </motion.div>
@@ -147,12 +147,12 @@ export function ExperienceSection() {
               return (
                 <div
                   key={item.number}
-                  className={`group/meta py-5 ${
+                  className={`group/meta py-3.5 ${
                     i > 0 ? "border-t border-[#294777] dark:border-[#294777]" : "pt-0"
                   }`}
                 >
                   <div className="flex items-start gap-3">
-                    <span className="font-seasons text-[1.75rem] leading-none text-[#B9B7FF] dark:text-[#B9B7FF]">
+                    <span className="font-seasons text-[1.5rem] leading-none text-[#B9B7FF] dark:text-[#B9B7FF]">
                       {item.number}
                     </span>
                     <div className="flex flex-1 items-start justify-between gap-2 pt-1">
@@ -166,7 +166,7 @@ export function ExperienceSection() {
                       />
                     </div>
                   </div>
-                  <div className="mt-2 pl-[2.6rem] text-[12.5px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
+                  <div className="mt-1.5 pl-[2.3rem] text-[11.5px] leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
                     {item.lines.map((line) => (
                       <div key={line}>{line}</div>
                     ))}
@@ -185,9 +185,9 @@ export function ExperienceSection() {
         custom={0.15}
         viewport={{ once: true, margin: "-15% 0px" }}
         variants={fadeUp}
-        className="container-editorial relative pb-6 pt-2 text-center sm:pb-5"
+        className="container-editorial relative pb-4 pt-1 text-center sm:pb-4"
       >
-        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
+        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.1rem,2vw,1.5rem)] italic leading-relaxed text-white dark:text-white">
           Real-world problems. Real impact.
           <br />
           That&rsquo;s where growth happens.

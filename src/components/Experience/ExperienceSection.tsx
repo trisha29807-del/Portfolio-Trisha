@@ -53,28 +53,28 @@ export function ExperienceSection() {
             <span className="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-[#7FDFFF] dark:bg-[#7FDFFF]" />
             <span className="absolute left-[3px] top-4 bottom-0 w-px bg-[#7FDFFF]/25 dark:bg-[#7FDFFF]/25" />
 
-            <span className="text-[13px] font-semibold tracking-[0.06em] text-[#B9B7FF] dark:text-[#B9B7FF]">
+            <span className="text-[12px] sm:text-[13px] font-semibold tracking-[0.06em] text-[#B9B7FF] dark:text-[#B9B7FF]">
               {experience.dateRange}
             </span>
 
-            <h3 className="mt-2 font-seasons text-[1.35rem] leading-tight text-white dark:text-white">
+            <h3 className="mt-2 font-seasons text-[1.2rem] sm:text-[1.3rem] leading-tight text-white dark:text-white">
               {experience.role}
             </h3>
 
-            <p className="mt-4 text-[14px] text-white dark:text-white">
+            <p className="mt-3 text-[13px] sm:text-[14px] text-white dark:text-white">
               {experience.org}
             </p>
-            <p className="mt-1 font-seasons text-[13px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
+            <p className="mt-1 font-seasons text-[12px] sm:text-[13px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
               {experience.collaboration}
             </p>
-            <p className="mt-3 text-[12px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
+            <p className="mt-2 text-[11px] sm:text-[12px] italic text-[#AEBEDE] dark:text-[#AEBEDE]">
               {experience.format}
             </p>
           </div>
 
           {/* What I worked on */}
           <div>
-            <span className="text-[11px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
+            <span className="text-[10px] sm:text-[11px] font-semibold tracking-[0.22em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
               {project.name}
             </span>
 
@@ -82,7 +82,7 @@ export function ExperienceSection() {
               {project.bullets.map((b) => (
                 <li
                   key={b.bold}
-                  className="flex gap-2.5 text-[13.5px] leading-[1.5] text-white/85 dark:text-white/85"
+                  className="flex gap-2.5 text-[13px] sm:text-[13.5px] leading-[1.5] text-white/85 dark:text-white/85"
                 >
                   <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />
                   <span>

@@ -26,31 +26,22 @@ export function ContactSection() {
 
       <div className="container-editorial relative py-6 sm:py-8">
         <div className="flex gap-6 sm:gap-10">
-          {/* left rail — number, vertical line, marker */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-15% 0px" }}
-            variants={fadeUp}
-            className="relative flex w-6 shrink-0 flex-col items-center sm:w-8"
-          >
-            <span className="font-seasons text-[15px] text-[#B9B7FF] dark:text-[#B9B7FF]">07</span>
-            <span className="mt-6 h-2 w-2 rotate-45 border border-[#B9B7FF]/50 dark:border-[#B9B7FF]/50" />
-            <span className="mt-6 w-px flex-1 bg-day-border dark:bg-night-border" />
-          </motion.div>
-
           {/* main content */}
           <div className="min-w-0 flex-1 pb-10 sm:pb-12">
-            <motion.span
+            <motion.div
               initial="hidden"
               whileInView="show"
               custom={0.05}
               viewport={{ once: true, margin: "-15% 0px" }}
               variants={fadeUp}
-              className="inline-block font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#7FDFFF]"
+              className="flex items-center gap-4 text-[#B9F0FF]"
             >
-              Contact
-            </motion.span>
+              <span className="font-seasons text-sm">07</span>
+              <span className="h-px w-14 bg-[#7C8EDB]" />
+              <span className="font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#7FDFFF]">
+                CONTACT
+              </span>
+            </motion.div>
 
             <motion.h2
               initial="hidden"

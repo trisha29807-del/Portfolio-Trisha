@@ -30,6 +30,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Curve Retro";
+  src: url("./assets/fonts/CurveRetro-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -136,6 +145,10 @@
 
   .font-mager {
     font-family: "Catchy Mager", "Arial", sans-serif;
+  }
+
+  .font-curve-retro {
+    font-family: "Curve Retro", "Arial", sans-serif;
   }
 }
 

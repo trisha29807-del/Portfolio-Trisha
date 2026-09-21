@@ -111,7 +111,7 @@ export function EducationSection() {
               <p className="mt-3 text-[13px] tracking-wide text-[#AEBEDE] dark:text-[#AEBEDE]">
                 New Delhi, India
               </p>
-              <p className="mt-2 text-[13px] font-semibold tracking-wide text-[#B9B7FF] dark:text-[#B9B7FF]">
+              <p className="mt-2 text-[20px] font-semibold tracking-wide text-[#B9B7FF] dark:text-[#B9B7FF]">
                 CGPA: 8.9/10
               </p>
             </div>

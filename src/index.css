@@ -30,61 +30,171 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Curve Retro";
-  src: url("./assets/fonts/CurveRetro-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* One knob for the whole page: the space between any two sections. */
     --section-gap: clamp(4rem, 6vw, 5.5rem);
+    /* Sticky navbar height once scrolled — used as scroll offset for anchors. */
     --nav-offset: 4.2rem;
   }
 
-  * { @apply border-day-border; }
-  html { scroll-behavior: smooth; }
+  * {
+    @apply border-day-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-day-bg text-day-ink font-sans antialiased;
-    transition: background-color 0.6s var(--ease-editorial, cubic-bezier(0.65, 0, 0.35, 1)), color 0.6s var(--ease-editorial, cubic-bezier(0.65, 0, 0.35, 1));
+    transition: background-color 0.6s var(--ease-editorial, cubic-bezier(0.65, 0, 0.35, 1)),
+      color 0.6s var(--ease-editorial, cubic-bezier(0.65, 0, 0.35, 1));
   }
-  html.dark body { @apply bg-night-bg text-night-ink; }
-  ::selection { @apply bg-day-burgundy/20; }
-  html.dark ::selection { @apply bg-day-burgundy/30 text-night-ink; }
+
+  html.dark body {
+    @apply bg-night-bg text-night-ink;
+  }
+
+  ::selection {
+    @apply bg-day-burgundy/20;
+  }
+
+  html.dark ::selection {
+    @apply bg-night-burgundy/30 text-night-ink;
+  }
+
   body {
-    background-image: radial-gradient(circle at 78% 18%, rgba(126, 139, 255, 0.11), transparent 24rem), radial-gradient(circle at 15% 72%, rgba(88, 120, 255, 0.08), transparent 30rem);
+    background-image:
+      radial-gradient(circle at 78% 18%, rgba(126, 139, 255, 0.11), transparent 24rem),
+      radial-gradient(circle at 15% 72%, rgba(88, 120, 255, 0.08), transparent 30rem);
     background-attachment: fixed;
   }
-  main { position: relative; overflow: hidden; background-color: #050D32; }
-  main > section[id]:not(#cover) { position: relative; background: transparent !important; }
-  main > section[id]:not(#cover) > *:not([aria-hidden="true"]) { position: relative; z-index: 1; }
-  main > section[id]:not(#cover) { margin-block: 0 !important; padding-block: calc(var(--section-gap) / 2) !important; scroll-margin-top: var(--nav-offset); }
-  main > section#contact[id]:not(#cover) { padding-bottom: 0 !important; }
-  main > section#contact[id]:not(#cover) > footer { margin-top: calc(var(--section-gap) / 2); }
-  a:focus-visible, button:focus-visible { outline: 1.5px solid currentColor; outline-offset: 4px; border-radius: 2px; }
+
+
+  /* One flat, uniform base for the whole page. The hero-style glow circles come from
+     <PageBackground /> (page-length, so nothing is clipped at a section edge). */
+  main {
+    position: relative;
+    overflow: hidden;
+    background-color: #050D32;
+  }
+
+  main > section[id]:not(#cover) {
+    position: relative;
+    background: transparent !important;
+  }
+
+  /* Content sits above the background glows. Decorative (aria-hidden) layers are
+     excluded so their own `absolute` positioning isn't overridden — otherwise they
+     fall into normal flow and push the section content down. */
+  main > section[id]:not(#cover) > *:not([aria-hidden="true"]) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Continuous section rhythm: generous breathing room, but no page-like panels. */
+  main > section[id]:not(#cover) {
+    margin-block: 0 !important;
+    padding-block: calc(var(--section-gap) / 2) !important;
+    scroll-margin-top: var(--nav-offset);
+  }
+
+  main > section#contact[id]:not(#cover) {
+    padding-bottom: 0 !important;
+  }
+
+  main > section#contact[id]:not(#cover) > footer {
+    margin-top: calc(var(--section-gap) / 2);
+  }
+
+  /* Visible, elegant keyboard focus states — accessibility floor */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 1.5px solid currentColor;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
 }
 
 @layer utilities {
-  .container-editorial { @apply mx-auto w-full max-w-editorial px-6 sm:px-10 lg:px-16; }
-  .font-boldfat { font-family: "Boldfat Mighty", "Arial Black", sans-serif; }
-  .font-seasons { font-family: "The Seasons", "Times New Roman", serif; }
-  .font-mager { font-family: "Catchy Mager", "Arial", sans-serif; }
-  .font-curve-retro { font-family: "Curve Retro", "Arial", sans-serif; }
+  .container-editorial {
+    @apply mx-auto w-full max-w-editorial px-6 sm:px-10 lg:px-16;
+  }
+
+  .font-boldfat {
+    font-family: "Boldfat Mighty", "Arial Black", sans-serif;
+  }
+
+  .font-seasons {
+    font-family: "The Seasons", "Times New Roman", serif;
+  }
+
+  .font-mager {
+    font-family: "Catchy Mager", "Arial", sans-serif;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-@keyframes bokeh-float {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(var(--dx, 0px), var(--dy, 0px), 0); }
+/* Page-length bokeh circles (see PageBackground.tsx) */
+
+/* outer wrapper: scroll parallax (--sy is set from JS; --a / --k are per circle) */
+.bokeh-wrap {
+  position: absolute;
+  pointer-events: none;
+  will-change: transform;
+  transform: translate3d(0, calc((var(--sy, 450) - var(--a, 450)) * var(--k, 0) * 1px), 0);
 }
-.bokeh-disc { position: absolute; border-radius: 9999px; pointer-events: none; will-change: transform; animation: bokeh-float var(--dur, 22s) ease-in-out infinite alternate; }
-@media (prefers-reduced-motion: reduce) { .bokeh-disc { animation: none !important; } }
+
+/* inner circle: looping drift + pulse (transform and opacity only) */
+.bokeh-disc {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: bokeh-drift var(--dur, 22s) ease-in-out infinite alternate;
+}
+
+@keyframes bokeh-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1;
+  }
+  33% {
+    transform: translate3d(var(--dx, 0px), calc(var(--dy, 0px) * -0.6), 0) scale(1.1);
+    opacity: var(--omin, 0.7);
+  }
+  66% {
+    transform: translate3d(calc(var(--dx, 0px) * -0.7), var(--dy, 0px), 0) scale(0.92);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(calc(var(--dx, 0px) * 0.5), calc(var(--dy, 0px) * 0.4), 0) scale(1.06);
+    opacity: var(--omin, 0.7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bokeh-wrap {
+    transform: none !important;
+  }
+
+  .bokeh-disc {
+    animation: none !important;
+  }
+}

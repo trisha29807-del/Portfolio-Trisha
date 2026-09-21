@@ -9,6 +9,7 @@ export interface Project {
   tech: string[];
   githubUrl?: string;
   liveUrl?: string;
+  demoVideoUrl?: string;
   caseStudyUrl?: string;
   primaryCta?: { label: string; href?: string; external?: boolean; action?: "toggle-detail" };
   githubLabel?: string;
@@ -79,6 +80,7 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/trisha29807-del/FOOD-BRIDGE-CONNECT",
     githubLabel: "GitHub ↗",
+    demoVideoUrl: "https://drive.google.com/drive/folders/15ax8OXIzB3x5w80k6OHQVdT1NBrGEuiK?usp=sharing",
     primaryCta: {
       label: "View Project",
       action: "toggle-detail",

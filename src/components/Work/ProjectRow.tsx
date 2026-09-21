@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Github, ExternalLink, ChevronDown } from "lucide-react";
+import { ArrowRight, Github, ExternalLink, ChevronDown, Play } from "lucide-react";
 import type { ReactNode } from "react";
 import { useRef } from "react";
 import type { Project } from "@/data/projects";
@@ -146,6 +146,16 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
           >
             Live Demo
             <ExternalLink size={14} strokeWidth={1.75} />
+          </a>
+        )}
+        {project.demoVideoUrl && (
+          <a href={project.demoVideoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 border border-white/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-white transition-all duration-300 ease-[cubic-bezier(0.65,0,0.35,1)] hover:-translate-y-px hover:bg-white hover:text-day-bg dark:border-white/60 dark:text-white dark:hover:bg-white dark:hover:text-night-bg"
+          >
+            Live Demo Video
+            <Play size={14} strokeWidth={1.75} />
           </a>
         )}
       </div>

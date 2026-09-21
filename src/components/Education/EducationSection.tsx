@@ -44,12 +44,13 @@ export function EducationSection() {
           viewport={{ once: true, margin: "-15% 0px" }}
           variants={fadeUp}
         >
-          <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
-            03
-          </span>
-          <h2 className="mt-4 font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#7FDFFF]">
-            Education
-          </h2>
+          <div className="flex items-center gap-4 text-[#B9F0FF]">
+            <span className="font-seasons text-sm">03</span>
+            <span className="h-px w-14 bg-[#7C8EDB]" />
+            <span className="font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] text-[#7FDFFF]">
+              EDUCATION
+            </span>
+          </div>
           <p className="mt-5 max-w-[38ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE] dark:text-[#AEBEDE]">
             Every engineer begins with curiosity.
           </p>

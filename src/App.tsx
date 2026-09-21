@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Navbar } from "@/components/layout/Navbar";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
+import { PageBackground } from "@/components/layout/PageBackground";
 import { Cover } from "@/components/Cover/Cover";
 import { AboutSection } from "@/components/About/AboutSection";
 import { WorkSection } from "@/components/Work/WorkSection";
@@ -20,6 +21,7 @@ function App() {
       <ScrollProgress />
       <Navbar />
       <main>
+        <PageBackground />
         <Cover />
         <AboutSection />
         <WorkSection />

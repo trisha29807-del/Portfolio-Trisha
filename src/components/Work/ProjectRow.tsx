@@ -174,7 +174,7 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
     <div
       ref={rowRef}
       id={project.slug}
-      className="group scroll-mt-24 border-t border-[#294777] py-10 transition-colors duration-500 ease-[cubic-bezier(0.65,0,0.35,1)] first:border-t-0 hover:border-[\#B9B7FF]/25 dark:border-[#294777] dark:hover:border-[\#B9B7FF]/25 sm:py-12"
+      className="group scroll-mt-24 py-10 sm:py-12"
     >
       <div className="container-editorial">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">

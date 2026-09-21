@@ -136,7 +136,7 @@ export function ContactSection() {
       </div>
 
       {/* footer — closes the page */}
-      <footer className="relative border-t border-[#294777] dark:border-[#294777]">
+      <footer className="relative">
         <div className="container-editorial flex items-center justify-between py-5 text-[10px] tracking-[0.14em] uppercase text-[#AEBEDE] dark:text-[#AEBEDE]">
           <span>Designed &amp; Engineered by Trisha</span>
           <CompassStar className="h-4 w-4 text-white/40 dark:text-white/40" />

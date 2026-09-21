@@ -70,18 +70,6 @@ export function WorkSection() {
             </p>
           </motion.div>
         </div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          custom={0.25}
-          viewport={{ once: true, margin: "-15% 0px" }}
-          variants={fadeUp}
-          className="mt-6 flex items-center gap-3 sm:mt-4"
-        >
-          <div className="h-px flex-1 bg-day-border dark:bg-night-border" />
-          <span className="h-1.5 w-1.5 rotate-45 bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />
-        </motion.div>
       </div>
 
       <div>
@@ -100,12 +88,7 @@ export function WorkSection() {
       </div>
 
       <div className="container-editorial pb-0">
-        <div className="flex items-center gap-3 pt-4">
-          <div className="h-px flex-1 bg-day-border dark:bg-night-border" />
-          <span className="h-1.5 w-1.5 rotate-45 bg-[#7FDFFF]/70 dark:bg-[#7FDFFF]/70" />
-          <div className="h-px flex-1 bg-day-border dark:bg-night-border" />
-        </div>
-        <p className="mt-8 text-center text-[11px] font-medium tracking-[0.28em] uppercase text-[#AEBEDE] dark:text-[#AEBEDE]">
+        <p className="pt-4 text-center text-[11px] font-medium tracking-[0.28em] uppercase text-[#AEBEDE] dark:text-[#AEBEDE]">
           More projects coming soon.
         </p>
       </div>

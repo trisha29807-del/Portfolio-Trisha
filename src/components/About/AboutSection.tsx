@@ -19,8 +19,6 @@ const focus = [
 export function AboutSection() {
   return (
     <section id="about" className="relative overflow-hidden bg-[#050D32] text-white">
-      <div aria-hidden="true" className="pointer-events-none absolute -right-28 top-10 h-80 w-80 rounded-full bg-[#6977C8]/20 blur-3xl" />
-      <div aria-hidden="true" className="pointer-events-none absolute -left-32 bottom-[-7rem] h-96 w-96 rounded-full bg-[#1E4B82]/35 blur-2xl" />
 
       <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-0 sm:px-10 sm:pt-10 sm:pb-0 lg:px-16">
         <div className="grid items-end gap-8 lg:grid-cols-[1.05fr_0.95fr]">
@@ -49,9 +47,7 @@ export function AboutSection() {
           </motion.div>
         </div>
 
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true, margin: "-10% 0px" }} variants={fadeUp} className="mt-10 h-px bg-[#294777]" />
-
-        <div className="mt-7 grid gap-px overflow-hidden border border-[#294777] bg-[#294777] md:grid-cols-3">
+        <div className="mt-16 grid gap-px overflow-hidden border border-[#294777] bg-[#294777] md:grid-cols-3">
           {focus.map(({ icon: Icon, label, text }, i) => (
             <motion.article
               key={label}

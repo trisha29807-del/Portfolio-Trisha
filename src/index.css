@@ -76,20 +76,12 @@
   }
 
 
-  /* Continuous hero-style atmosphere across the entire portfolio. */
+  /* One flat, uniform base for the whole page. The hero-style glow circles come from
+     <PageBackground /> (page-length, so nothing is clipped at a section edge). */
   main {
     position: relative;
     overflow: hidden;
     background-color: #050D32;
-    background-image:
-      radial-gradient(circle at -2% 0%, rgba(49, 87, 139, 0.55) 0, rgba(49, 87, 139, 0.24) 13rem, transparent 23rem),
-      radial-gradient(circle at 103% 0%, rgba(156, 166, 255, 0.48) 0, rgba(156, 166, 255, 0.20) 13rem, transparent 24rem),
-      radial-gradient(circle at 18% 96%, rgba(25, 60, 114, 0.62) 0, rgba(25, 60, 114, 0.24) 15rem, transparent 27rem),
-      radial-gradient(circle at 69% 34%, rgba(43, 79, 134, 0.48) 0, rgba(43, 79, 134, 0.16) 13rem, transparent 25rem),
-      radial-gradient(circle at 61% 82%, rgba(40, 78, 136, 0.38) 0, rgba(40, 78, 136, 0.13) 10rem, transparent 22rem),
-      radial-gradient(circle at 108% 94%, rgba(73, 108, 165, 0.32) 0, rgba(73, 108, 165, 0.12) 12rem, transparent 23rem);
-    background-attachment: fixed;
-    background-size: 100% 100%;
   }
 
   main > section[id]:not(#cover) {
@@ -155,5 +147,25 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Page-length bokeh discs (see PageBackground.tsx) */
+@keyframes bokeh-float {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(var(--dx, 0px), var(--dy, 0px), 0); }
+}
+
+.bokeh-disc {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  will-change: transform;
+  animation: bokeh-float var(--dur, 22s) ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bokeh-disc {
+    animation: none !important;
   }
 }

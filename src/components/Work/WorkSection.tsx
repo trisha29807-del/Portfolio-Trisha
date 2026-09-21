@@ -41,12 +41,13 @@ export function WorkSection() {
             viewport={{ once: true, margin: "-15% 0px" }}
             variants={fadeUp}
           >
-            <span className="text-[11px] font-semibold tracking-[0.28em] uppercase text-[#B9B7FF] dark:text-[#B9B7FF]">
-              02
-            </span>
-            <h2 className="mt-5 font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#7FDFFF]">
-              Selected Works
-            </h2>
+            <div className="flex items-center gap-4 text-[#B9F0FF]">
+              <span className="font-seasons text-sm">02</span>
+              <span className="h-px w-14 bg-[#7C8EDB]" />
+              <span className="font-curve-retro text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.03] tracking-[0.04em] text-[#7FDFFF]">
+                SELECTED WORKS
+              </span>
+            </div>
             <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.03] text-white dark:text-white">
               A collection of ideas,{" "}
               <em className="font-seasons italic text-[#B9B7FF] dark:text-[#B9B7FF]">

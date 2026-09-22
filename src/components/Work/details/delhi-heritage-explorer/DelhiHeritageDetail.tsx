@@ -200,86 +200,95 @@ export function DelhiHeritageDetail() {
           <SectionLabel number="01" title="Overview" />
         </motion.div>
 
-        <div className="mt-8 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            custom={0.1}
-            variants={fadeUp}
-          >
-            <p className="max-w-3xl font-serif text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.3] text-day-ink dark:text-night-ink">
+        <div className="mt-7 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <div>
+            <motion.p
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              custom={0.1}
+              variants={fadeUp}
+              className="max-w-xl font-serif text-[clamp(1.2rem,1.8vw,1.45rem)] leading-[1.3] text-day-ink dark:text-night-ink"
+            >
               An AI-powered platform for exploring Delhi's heritage, culture, and local experiences.
-            </p>
-          </motion.div>
+            </motion.p>
 
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            custom={0.18}
-            variants={fadeUp}
-          >
-            <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-1">
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              custom={0.15}
+              variants={fadeUp}
+              className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4"
+            >
               {dheHero.meta.map((item) => (
                 <div key={item.label}>
-                  <div className="text-[10px] font-semibold tracking-[0.16em] uppercase text-day-burgundy dark:text-night-burgundy">
+                  <div className="text-[9px] font-semibold tracking-[0.16em] uppercase text-day-burgundy dark:text-night-burgundy">
                     {item.label}
                   </div>
-                  <div className="mt-1 text-[13px] text-day-ink dark:text-night-ink">
+                  <div className="mt-1 text-[12px] text-day-ink dark:text-night-ink">
                     {item.value}
                   </div>
                 </div>
               ))}
-            </div>
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              custom={0.2}
+              variants={fadeUp}
+              className="mt-5 flex flex-wrap gap-2"
+            >
+              {dheHero.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border border-day-border px-2.5 py-1 text-[10px] font-medium text-day-ink/80 dark:border-night-border dark:text-night-ink/80"
+                >
+                  {tech}
+                </span>
+              ))}
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              custom={0.25}
+              variants={fadeUp}
+              className="mt-5 flex flex-wrap gap-2.5"
+            >
+              <a
+                href={dheHero.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-day-burgundy px-4 py-2.5 text-[10px] font-medium tracking-[0.12em] uppercase text-day-bg dark:bg-night-burgundy dark:text-night-bg"
+              >
+                View Live Project <ExternalLink size={13} strokeWidth={1.75} />
+              </a>
+              <a
+                href={dheHero.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-day-ink/70 px-4 py-2.5 text-[10px] font-medium tracking-[0.12em] uppercase text-day-ink dark:border-night-ink/60 dark:text-night-ink"
+              >
+                View GitHub <Github size={13} strokeWidth={1.75} />
+              </a>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            custom={0.15}
+            variants={fadeUp}
+            className="mx-auto w-full max-w-[760px]"
+          >
+            <ProductScreenshot {...dheScreens.home} priority />
           </motion.div>
         </div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          custom={0.2}
-          variants={fadeUp}
-          className="mt-7 flex flex-wrap gap-2"
-        >
-          {dheHero.stack.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full border border-day-border px-3.5 py-1.5 text-[11px] font-medium text-day-ink/80 dark:border-night-border dark:text-night-ink/80"
-            >
-              {tech}
-            </span>
-          ))}
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          custom={0.25}
-          variants={fadeUp}
-          className="mt-7 flex flex-wrap gap-3"
-        >
-          <a
-            href={dheHero.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-day-burgundy px-6 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-bg transition-all hover:-translate-y-px dark:bg-night-burgundy dark:text-night-bg"
-          >
-            View Live Project <ExternalLink size={14} strokeWidth={1.75} />
-          </a>
-          <a
-            href={dheHero.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-day-ink/70 px-5 py-3.5 text-[12px] font-medium tracking-[0.12em] uppercase text-day-ink transition-all hover:-translate-y-px hover:bg-day-ink hover:text-day-bg dark:border-night-ink/60 dark:text-night-ink dark:hover:bg-night-ink dark:hover:text-night-bg"
-          >
-            View GitHub <Github size={14} strokeWidth={1.75} />
-          </a>
-        </motion.div>
-
-        <ProductScreenshot {...dheScreens.home} priority />
       </section>
 
       <section id="dhe-problem" className="scroll-mt-32 border-t border-day-border py-16 dark:border-night-border">

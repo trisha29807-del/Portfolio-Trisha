@@ -29,6 +29,13 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
   const primaryExternal = project.primaryCta?.external ?? false;
   const githubLabel = project.githubLabel ?? "GitHub";
 
+  const closeBreakdown = () => {
+    setExpanded(false);
+    window.requestAnimationFrame(() => {
+      rowRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   const mockupBlock = (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -208,6 +215,23 @@ export function ProjectRow({ project, mockup, detail }: ProjectRowProps) {
               >
                 <div className="mt-8 border-t border-[#294777] pt-8 dark:border-[#294777]">
                   {detail}
+
+                  <div className="flex justify-center pb-8 pt-10 sm:pb-10">
+                    <button
+                      type="button"
+                      onClick={closeBreakdown}
+                      className="group/close inline-flex items-center gap-3 text-[11px] font-medium tracking-[0.16em] uppercase text-[#AEBEDE] transition-colors duration-300 hover:text-[#7FDFFF] dark:text-[#AEBEDE] dark:hover:text-[#7FDFFF]"
+                    >
+                      <span className="h-px w-10 bg-[#AEBEDE]/40 transition-all duration-300 group-hover/close:w-14 group-hover/close:bg-[#7FDFFF]/60" />
+                      Close Breakdown
+                      <ChevronDown
+                        size={14}
+                        strokeWidth={1.75}
+                        className="rotate-180 transition-transform duration-300"
+                      />
+                      <span className="h-px w-10 bg-[#AEBEDE]/40 transition-all duration-300 group-hover/close:w-14 group-hover/close:bg-[#7FDFFF]/60" />
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             )}

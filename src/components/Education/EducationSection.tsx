@@ -154,11 +154,7 @@ export function EducationSection() {
         variants={fadeUp}
         className="container-editorial relative pb-6 pt-2 text-center sm:pb-5"
       >
-        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
-          Learning in the classroom.
-          <br />
-          Building beyond it.
-        </p>
+        
       </motion.div>
     </section>
   );

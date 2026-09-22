@@ -54,10 +54,10 @@ export function ExperienceSection() {
               {experience.role}
             </h3>
 
-            <p className="mt-3 text-[13px] text-white sm:text-[14px]">
+            <p className="mt-10 text-[13px] text-white sm:text-[14px]">
               {experience.org}
             </p>
-            <p className="mt-1 font-seasons text-[12px] italic text-[#AEBEDE] sm:text-[13px]">
+            <p className="mt-3 font-seasons text-[12px] text-[#AEBEDE] sm:text-[13px]">
               {experience.collaboration}
             </p>
             <p className="mt-2 text-[11px] italic text-[#AEBEDE] sm:text-[12px]">

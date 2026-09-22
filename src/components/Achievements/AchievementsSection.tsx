@@ -30,7 +30,7 @@ export function AchievementsSection() {
               ACHIEVEMENTS
             </span>
           </div>
-          <p className="mt-5 max-w-[42ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE]">
+          <p className="mt-5 max-w-[43ch] font-seasons text-[19px] italic leading-relaxed text-[#AEBEDE]">
             A few things I&rsquo;ve built, led, and kept showing up for.
           </p>
         </motion.div>

@@ -79,11 +79,11 @@ export function SkillsSection() {
         variants={fadeUp}
         className="container-editorial relative pb-6 pt-2 text-center sm:pb-5"
       >
-        <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
+        {/* <p className="mx-auto max-w-xl font-seasons text-[clamp(1.25rem,2.4vw,1.75rem)] italic leading-relaxed text-white dark:text-white">
           Tools matter.
           <br />
           What you build with them matters more.
-        </p>
+        </p> */}
       </motion.div>
     </section>
   );

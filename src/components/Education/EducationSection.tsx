@@ -55,11 +55,6 @@ export function EducationSection() {
             Every engineer begins with curiosity.
           </p>
         </motion.div>
-
-        <div className="mt-5 sm:mt-6">
-          <AnimatedDivider />
-        </div>
-
         {/* Main composition — degree left, university right */}
         <div className="grid grid-cols-1 gap-12 py-6 sm:py-8 lg:grid-cols-2 lg:gap-20">
           <motion.div

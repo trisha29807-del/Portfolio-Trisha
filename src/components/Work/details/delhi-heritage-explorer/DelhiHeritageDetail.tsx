@@ -176,7 +176,7 @@ export function DelhiHeritageDetail() {
     return () => observer.disconnect();
   }, []);
 
-    const scrollTo = (id: string) => {
+  const scrollTo = (id: string) => {
     scrollToTarget(id);
   };
 
@@ -215,8 +215,8 @@ export function DelhiHeritageDetail() {
             custom={0.1}
             variants={fadeUp}
           >
-            <p className="max-w-2xl font-serif text-[clamp(1.9rem,4vw,3rem)] leading-[1.08] text-day-ink dark:text-night-ink">
-              {dheHero.description}
+            <p className="max-w-3xl font-serif text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.3] text-day-ink dark:text-night-ink">
+              An AI-powered platform for exploring Delhi's heritage, culture, and local experiences.
             </p>
           </motion.div>
 
@@ -526,7 +526,6 @@ export function DelhiHeritageDetail() {
             <p className="max-w-2xl text-[14px] leading-relaxed text-day-muted dark:text-night-muted">
               {hackathon.body}
             </p>
-            
           </div>
         </div>
       </section>

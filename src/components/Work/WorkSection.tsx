@@ -48,10 +48,11 @@ export function WorkSection() {
                 SELECTED WORKS
               </span>
             </div>
-            <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,4vw,4.5rem)] leading-[1.03] text-white dark:text-white">
+            <h2 className="mt-4 font-boldfat text-[clamp(2.5rem,3.5vw,4.5rem)] leading-[1.03] text-white dark:text-white">
               A collection of ideas,{" "}
+              <br></br>
               <em className="font-seasons italic text-[#B9B7FF] dark:text-[#B9B7FF]">
-                products and experiments
+                products and experiments<br></br>
               </em>{" "}
               I&rsquo;ve built.
             </h2>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { Navbar } from "@/components/layout/Navbar";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
@@ -31,6 +32,7 @@ function App() {
         <AchievementsSection />
         <ContactSection />
       </main>
+      <Analytics />
     </ThemeProvider>
   );
 }
